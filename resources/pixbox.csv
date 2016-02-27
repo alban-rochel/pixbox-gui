@@ -1,0 +1,436 @@
+PREPARE;cp /media/BBB/pixbox/config/config2.cfg /root/.picodrive/;
+#MACRO;<MDART>;C:\temp\images\final\
+MACRO;<MDART>;/media/BBB/pixbox/resources/art/
+MACRO;<MD>;SDL_VIDEO_YUV_DIRECT=1 SDL_VIDEO_YUV_HWACCEL=1 SDL_ACCEL=1 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/media/BBB/lib NO_MENU=1 /media/BBB/sources/picodrive/picodrive/PicoDrive -config /root/.picodrive/config2.cfg /media/BBB/roms/gen_usa/
+MACRO;<GGART>;<MDART>
+MACRO;<MSART>;<MDART>
+MACRO;<MS>;SDL_VIDEO_YUV_DIRECT=1 SDL_VIDEO_YUV_HWACCEL=1 SDL_ACCEL=1 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/media/BBB/lib NO_MENU=1 /media/BBB/sources/picodrive/picodrive/PicoDrive -config /root/.picodrive/config2.cfg /media/BBB/roms/sms/
+MACRO;<GG>;advmess gamegear -cart 
+MACRO;<GB>;advmess gameboy -cart 
+MACRO;<GBC>;advmess gbcolor -cart 
+MACRO;<ENGINE>;advmess pce -cart 
+MACRO;<SNES>;/media/BBB/sources/snes9x-sdl-master-optim/sdl/snes9x-sdl -nomp5 -nojustifier -nomouse -nosuperscope -port1 pad1 -port2 pad2 -playbackrate 40960 /media/BBB/roms/snes/
+MACRO;<NES>;advmess nes -cart 
+MACRO;<ARCADE>;advmame 
+MACRO;<PSX>; NO_MENU=1 /media/BBB/sources/pcsx_rearmed/pcsx -cdfile /media/BBB/roms/psx/
+MACRO;<NESART>;<MDART>
+MACRO;<SNESART>;<MDART>;;;;;;
+MACRO;<GBCART>;<MDART>;;;;;;
+MACRO;<GBART>;<MDART>;;;;;;
+MACRO;<ARCART>;<MDART>;;;;;;
+MACRO;<PCEART>;<MDART>;;;;;;
+MACRO;<PSART>;<MDART>;;;;;;
+MACRO;<PCART>;<MDART>;;;;;;
+MACRO;<NG>;gngeo-0.7 --p1key=97,115,100,113,49,53,273,274,276,275 --p2key=102,103,104,98,50,116,105,107,106,108 --scale=3 --romrcdir=/media/BBB/sources/gngeo-0.7/romrc.d/ --rompath=/media/BBB/roms/neogeo/ ;;;;;;
+MACRO;<NGART>;<MDART>;;;;;;
+#Titre;Titre court;Clef de tri;Type;Machine;Nb joueurs;Famille;Artwork;Commande
+The Addams Family;Addams Family;addams-md;Plate-forme;Megadrive;1;;<MDART>addams-md.png;<MD>Addams Family, The (USA, Europe).md
+The Adventures of Batman & Robin;Adv. Of Batman and Robin;adv-batman-robin-snes;Plate-forme%Action%Shooter;Super NES;1;Batman;<SNESART>adv-batman-robin-md.png;<SNES>Adventures of Batman & Robin, The (USA).sfc
+The Adventures of Batman & Robin;Adv. Of Batman and Robin;adv-batman-robin-md;Plate-forme%Action%Shooter;Megadrive;2;Batman;<MDART>adv-batman-robin-md.png;<MD>Adventures of Batman & Robin, The (USA).md
+Batman Returns;Batman Returns;batman-returns-snes;Baston;Super NES;1;Batman;<SNESART>adv-batman-robin-md.png;<SNES>Batman Returns (USA).sfc
+Aladdin;Aladdin;aladdin-md;Plate-forme;Megadrive;1;Disney;<MDART>aladdin-md.png;<MD>Aladdin (USA).md
+Alien Soldier;Alien Soldier;alien-soldier-md;Plate-forme%Action%Shooter;Megadrive;1;;<MDART>alien-soldier-md.png;<MD>Alien Soldier (Japan).md
+Alisia Dragoon;Alisia Dragoon;alisia-dragoon-md;Action%Shooter;Megadrive;1;;<MDART>alisia-dragoon-md.png;<MD>Alisia Dragoon (USA).md
+Bad Omen;Bad Omen;bad-omen-md;Flipper%Action;Megadrive;1;;<MDART>bad-omen-md.png;<MD>Bad Omen (Japan, Korea).md
+Streets of Rage;Streets of Rage;streets-of-rage-1-md;Action%Baston;Megadrive;2;;<MDART>streets-of-rage-1-md.png;<MD>Bare Knuckle - Ikari no Tetsuken ~ Streets of Rage (World) (Rev A).md
+Streets of Rage 2;Streets of Rage 2;streets-of-rage-2-md;Action%Baston;Megadrive;2;;<MDART>streets-of-rage-2-md.png;<MD>Bare Knuckle II - Shitou heno Chingonka ~ Streets of Rage II (Japan, Europe).md
+Streets of Rage 3;Streets of Rage 3;streets-of-rage-3-md;Action%Baston;Megadrive;2;;<MDART>streets-of-rage-3-md.png;<MD>Bare Knuckle III (Japan).md
+Batman;Batman;batman-md;Plate-forme%Action;Megadrive;1;Batman;<MDART>batman-md.png;<MD>Batman (Japan).md
+Batman Returns;Batman Returns;batman-returns-md;Plate-forme%Action;Megadrive;1;Batman;<MDART>batman-returns-md.png;<MD>Batman Returns (World).md
+Battletoads;Battletoads;battletoads-md;Action%Baston;Megadrive;2;;<MDART>battletoads-md.png;<MD>Battletoads (World).md
+Boogerman;Boogerman;boogerman-md;Plate-forme;Megadrive;1;;<MDART>boogerman-md.png;<MD>Boogerman - A Pick and Flick Adventure (USA).md
+Cannon Fodder;Cannon Fodder;cannon-fodder-md;Action%Shooter;Megadrive;2;;<MDART>cannon-fodder-md.png;<MD>Cannon Fodder (Europe).md
+Castle of Illusion, Starring Mickey Mouse;Castle of Illusion;castle-illusion-md;Plate-forme;Megadrive;1;Disney;<MDART>castle-of-illusion-md.png;<MD>Castle of Illusion Starring Mickey Mouse (USA, Europe).md
+The Chaos Engine 2;Chaos Engine 2;chaos-engine-2-md;Action;Megadrive;2;;<MDART>chaos-engine-2-md.png;<MD>Chaos Engine 2, The (Europe) (Proto).md
+The Chaos Engine;Chaos Engine;chaos-engine-1-md;Action;Megadrive;2;;<MDART>chaos-engine-1-md.png;<MD>Chaos Engine, The (Europe).md
+Chiki Chiki Boys;Chiki Chiki Boys;chiki-chiki-boys-md;Plate-forme;Megadrive;1;;<MDART>chiki-chiki-boys-md.png;<MD>Chiki Chiki Boys (USA, Europe).md
+Chuck Rock;Chuck Rock;chuck-rock-1-md;Plate-forme;Megadrive;1;;<MDART>chuck-rock-1-md.png;<MD>Chuck Rock (USA).md
+Chuck Rock II, Son of Chuck;Chuck Rock 2;chuck-rock-2-md;Plate-forme;Megadrive;1;;<MDART>chuck-rock-2-md.png;<MD>Chuck Rock II - Son of Chuck (USA).md
+Columns;Columns;columns-1-md;Puzzle;Megadrive;2;;<MDART>columns-1-md.png;<MD>Columns (World) (v1.1).md
+Columns III;Columns III;columns-3-md;Puzzle;Megadrive;2;;<MDART>columns-3-md.png;<MD>Columns III (USA).md
+Comix Zone;Comix Zone;comix-zone-md;Action%Baston;Megadrive;1;;<MDART>comix-zone-md.png;<MD>Comix Zone (USA).md
+Desert Demolition Starring Road Runner and Wile E. Coyote;Desert Demolition;desert-demolition-md;Plate-forme;Megadrive;1;Looney Tunes;<MDART>desert-demolition-md.png;<MD>Desert Demolition Starring Road Runner and Wile E. Coyote (USA, Europe).md
+Desert Strike, Return to the Gulf;Desert Strike;desert-strike-md;Action;Megadrive;1;Desert Strike;<MDART>desert-strike-md.png;<MD>Desert Strike - Return to the Gulf (USA, Europe).md
+Donald in Maui Mallard;Maui Mallard;maui-mallard-md;Plate-forme;Megadrive;1;Disney;<MDART>maui-mallard-md.png;<MD>Donald in Maui Mallard (Europe).md
+Double Dragon;Double Dragon;double-dragon-md;Baston;Megadrive;2;;<MDART>double-dragon-md.png;<MD>Double Dragon (USA, Europe).md
+Dr Robotnik's Mean Bean Machine;Dr Robotnik;dr-robotnik-md;Puzzle;Megadrive;2;Sonic;<MDART>dr-robotnik-md.png;<MD>Dr. Robotnik's Mean Bean Machine (USA).md
+Dynamite Headdy;Dynamite Headdy;dynamite-headdy-md;Action;Megadrive;1;;<MDART>dynamite-headdy-md.png;<MD>Dynamite Headdy (Japan).md
+Earthworm Jim;Earthworm Jim;earthworm-jim-1-md;Plate-forme;Megadrive;1;;<MDART>earthworm-jim-1-md.png;<MD>Earthworm Jim (USA).md
+Earthworm Jim 2;Earthworm Jim 2;earthworm-jim-2-md;Plate-forme;Megadrive;1;;<MDART>earthworm-jim-2-md.png;<MD>Earthworm Jim 2 (USA).md
+Ecco, The Tides of Time;Ecco II;ecco-2-md;Aventure;Megadrive;1;;<MDART>ecco-2-md.png;<MD>Ecco - The Tides of Time (USA).md
+Ecco the Dolphin;Ecco;ecco-1-md;Aventure;Megadrive;1;;<MDART>ecco-1-md.png;<MD>Ecco the Dolphin (USA, Europe).md
+F1 - World Championship Edition;F1;f1-md;Course;Megadrive;2;;<MDART>f1-md.png;<MD>F1 - World Championship Edition (Europe).md
+Flashback, The Quest for Identity;Flashback;flashback-md;Action%Aventure;Megadrive;1;;<MDART>flashback-md.png;<MD>Flashback - The Quest for Identity (USA).md
+The Misadventures of Flink;Flink;flink-md;Plate-forme;Megadrive;1;;<MDART>flink-md.png;<MD>Flink (Europe).md
+Gain Ground;Gain Ground;gain-ground-md;Action%Strategie;Megadrive;2;;<MDART>gain-ground-md.png;<MD>Gain Ground (World).md
+Galaxy Force II;Galaxy Force II;galaxy-force-2-md;Shooter;Megadrive;1;;<MDART>galaxy-force-2-md.png;<MD>Galaxy Force II (World).md
+General Chaos;General Chaos;general-chaos-md;Action%Shooter;Megadrive;2;;<MDART>general-chaos-md.png;<MD>General Chaos (USA, Europe).md
+Ghouls'n Ghosts;Ghouls'n Ghosts;ghouls-n-ghosts-md;Plate-forme;Megadrive;1;;<MDART>ghouls-n-ghosts-md.png;<MD>Ghouls'n Ghosts (USA, Europe).md
+Golden Axe;Golden Axe;golden-axe-1-md;Baston;Megadrive;2;;<MDART>golden-axe-1-md.png;<MD>Golden Axe (World) (v1.1).md
+Golden Axe 2;Golden Axe 2;golden-axe-2-md;Baston;Megadrive;2;;<MDART>golden-axe-2-md.png;<MD>Golden Axe II (World) (Beta).md
+Golden Axe 3;Golden Axe 3;golden-axe-3-md;Baston;Megadrive;2;;<MDART>golden-axe-3-md.png;<MD>Golden Axe III (Japan).md
+Gunstar Heroes;Gunstar Heroes;gunstar-heroes-md;Shooter;Megadrive;2;;<MDART>gunstar-heroes-md.png;<MD>Gunstar Heroes (USA).md
+James Pond II, Codename Robocod;James Pond II;james-pond-2-md;Plate-forme;Megadrive;1;;<MDART>james-pond-2-md.png;<MD>James Pond II - Codename - Robocod (USA, Europe).md
+The Jungle Book;Jungle Book;jungle-book-md;Plate-forme;Megadrive;1;;<MDART>jungle-book-md.png;<MD>Jungle Book, The (USA).md
+Jurassic Park;Jurassic Park;jurassic-park-md;Plate-forme;Megadrive;1;;<MDART>jurassic-park-md.png;<MD>Jurassic Park (USA).md
+Kid Chameleon;Kid Chameleon;kid-chameleon-md;Plate-forme;Megadrive;1;;<MDART>kid-chameleon-md.png;<MD>Kid Chameleon (USA, Europe).md
+Klax;Klax;klax-md;Puzzle;Megadrive;2;;<MDART>klax-md.png;<MD>Klax (USA, Europe).md
+Krusty's Super Fun House;Krusty;krusty-md;Plate-forme%Puzzle;Megadrive;1;Simpsons;<MDART>krusty-md.png;<MD>Krusty's Super Fun House (USA, Europe) (v1.1).md
+Landstalker;Landstalker;landstalker-md;Action%Aventure;Megadrive;1;;<MDART>landstalker-md.png;<MD>Landstalker (USA).md
+The Legend of Galahad;Galahad;galahad-md;Plate-forme;Megadrive;1;;<MDART>galahad-md.png;<MD>Legend of Galahad, The (USA, Europe).md
+Lemmings;Lemmings;lemmings-1-md;Puzzle;Megadrive;1;;<MDART>lemmings-1-md.png;<MD>Lemmings (Japan, USA) (v1.1).md
+Lemmings 2;Lemmings 2;lemmings-2-md;Puzzle;Megadrive;1;;<MDART>lemmings-2-md.png;<MD>Lemmings 2 - The Tribes (USA).md
+Light Crusader;Light Crusader;light-crusader-md;Action%Aventure;Megadrive;1;;<MDART>light-crusader-md.png;<MD>Light Crusader (Europe) (En,Fr,De,Es).md
+The Lion King;Lion King;lion-king-md;Plate-forme;Megadrive;1;Disney;<MDART>lion-king-md.png;<MD>Lion King, The (World).md
+The Lost Vikings;Lost Vikings;lost-vikings-md;Puzzle%Plate-forme;Megadrive;1;;<MDART>lost-vikings-md.png;<MD>Lost Vikings, The (USA).md
+Man Overboard!;Man Overboard!;man-overboard-md;Puzzle;Megadrive;1;;<MDART>man-overboard-md.png;<MD>Man Overboard! (Europe).md
+Marble Madness;Marble Madness;marble-madness-md;Action;Megadrive;1;;<MDART>marble-madness-md.png;<MD>Marble Madness (USA, Europe).md
+Marsupilami;Marsupilami;marsupilami;Action%Puzzle;Megadrive;1;;<MDART>marsupilami-md.png;<MD>Marsupilami (USA) (En,Fr,De,Es,It).md
+Mega Bomberman;Mega Bomberman;mega-bomberman-md;Action;Megadrive;2;Bomberman;<MDART>mega-bomberman-md.png;<MD>Mega Bomberman (USA).md
+Mega SWIV;Mega SWIV;mega-swiv-md;Action%Shooter;Megadrive;2;;<MDART>mega-swiv-md.png;<MD>Mega SWIV (Europe).md
+Mega Turrican;Mega Turrican;mega-turrican-md;Action%Shooter;Megadrive;1;;<MDART>mega-turrican-md.png;<MD>Mega Turrican (USA).md
+Michael Jackson's Moonwalker;Moonwalker;moonwalker-md;Action%Plate-forme;Megadrive;1;;<MDART>moonwalker-md.png;<MD>Michael Jackson's Moonwalker (World).md
+Mickey Mania, The Timeless Adventures of Mickey Mouse;Mickey Mania;mickey-mania-md;Action%Plate-forme;Megadrive;1;Disney;<MDART>mickey-mania-md.png;<MD>Mickey Mania - The Timeless Adventures of Mickey Mouse (USA).md
+Micro Machines;Micro Machines;micro-machines-1-md;Course;Megadrive;2;Micro Machines;<MDART>micro-machines-1-md.png;<MD>Micro Machines (USA, Europe) (MDMM ACD3).md
+Micro Machines 2;Micro Machines 2;micro-machines-2-md;Course;Megadrive;2;Micro Machines;<MDART>micro-machines-2-md.png;<MD>Micro Machines 2 - Turbo Tournament (Europe) (J-Cart) (Alt 1).md
+Micro Machines Military;Micro Machines Military;micro-machines-4-md;Course;Megadrive;2;Micro Machines;<MDART>micro-machines-4-md.png;<MD>Micro Machines Military (Europe) (J-Cart).md
+Micro Machines 96, Turbo Tournament;Micro Machines 96;micro-machines-3-md;Course;Megadrive;2;Micro Machines;<MDART>micro-machines-3-md.png;<MD>Micro Machines Turbo Tournament 96 (Europe) (v1.1) (J-Cart).md
+Mortal Kombat;Mortal Kombat;mortal-kombat-1-md;Baston;Megadrive;2;Mortal Kombat;<MDART>mortal-kombat-1-md.png;<MD>Mortal Kombat (World) (v1.1).md
+Mortal Kombat II;Mortal Kombat II;mortal-kombat-2-md;Baston;Megadrive;2;Mortal Kombat;<MDART>mortal-kombat-2-md.png;<MD>Mortal Kombat II (World).md
+Mutant League Hockey;Mutant League Hockey;mutant-league-hockey-md;Sport;Megadrive;2;;<MDART>mutant-league-hockey-md.png;<MD>Mutant League Hockey (USA, Europe).md
+Olympic Gold;Olympic Gold;olympic-gold-md;Sport;Megadrive;2;;<MDART>olympic-gold-md.png;<MD>Olympic Gold (USA).md
+Out Run;Out Run;out-run-md;Course;Megadrive;1;;<MDART>out-run-md.png;<MD>OutRun (USA, Europe).md
+Out Run 2019;Out Run 2019;out-run-2019-md;Course;Megadrive;1;;<MDART>out-run-2019-md.png;<MD>OutRun 2019 (USA).md
+OutRunners;OutRunners;out-runners-md;Course;Megadrive;1;;<MDART>out-runners-md.png;<MD>OutRunners (USA).md
+Pete Sampras Tennis;Pete Sampras Tennis;pete-sampras-tennis-md;Sport;Megadrive;2;;<MDART>pete-sampras-tennis-md.png;<MD>Pete Sampras Tennis (USA, Europe) (J-Cart).md
+Phantasy Star II;Phantasy Star II;phantasy-star-2-md;Aventure%Role;Megadrive;1;;<MDART>phantasy-star-2-md.png;<MD>Phantasy Star II (USA, Europe) (Rev A).md
+Phantasy Star III, Generations of Doom;Phantasy Star III;phantasy-star-3-md;Aventure%Role;Megadrive;1;;<MDART>phantasy-star-3-md.png;<MD>Phantasy Star III - Generations of Doom (USA, Europe).md
+Phantasy Star IV;Phantasy Star IV;phantasy-star-4-md;Aventure%Role;Megadrive;1;;<MDART>phantasy-star-4-md.png;<MD>Phantasy Star IV (USA).md
+Pirates! Gold;Pirates! Gold;pirates-gold-md;Action;Megadrive;1;;<MDART>pirates-gold-md.png;<MD>Pirates! Gold (USA).md
+Pitfall, The Mayan Adventure;Pitfall;pitfall-md;Action%Plate-forme;Megadrive;1;;<MDART>pitfall-md.png;<MD>Pitfall - The Mayan Adventure (USA).md
+Prince Of Persia;Prince Of Persia;prince-of-persia-md;Plate-forme;Megadrive;1;;<MDART>prince-of-persia-md.png;<MD>Prince of Persia (USA).md
+Puggsy;Puggsy;puggsy-md;Plate-forme%Puzzle;Megadrive;1;;<MDART>puggsy-md.png;<MD>Puggsy (USA).md
+Quackshot Starring Donald Duck;Quackshot;quackshot-md;Plate-forme;Megadrive;1;Disney;<MDART>quackshot-md.png;<MD>QuackShot Starring Donald Duck ~ QuackShot - I Love Donald Duck - Guruzia Ou no Hihou (World) (v1.1).md
+Ranger X;Ranger X;ranger-x-md;Shooter;Megadrive;1;;<MDART>ranger-x-md.png;<MD>Ranger X (USA).md
+Ren & Stimpy, Stimpy's Invention;Ren & Stimpy;ren-stimpy-md;Action%Plate-forme;Megadrive;2;;<MDART>ren-and-stimpy-md.png;<MD>Ren & Stimpy Show Presents, The - Stimpy's Invention (USA).md
+The Revenge of Shinobi;Revenge of Shinobi;revenge-of-shinobi;Action%Plate-forme;Megadrive;1;Shinobi;<MDART>revenge-of-shinobi-md.png;<MD>Revenge of Shinobi, The (USA, Europe) (Rev B).md
+Ristar;Ristar;ristar-md;Action%Plate-forme;Megadrive;1;;<MDART>ristar-md.png;<MD>Ristar (USA, Europe) (September 1994).md
+Road Rash;Road Rash;road-rash-1-md;Course%Action;Megadrive;1;Road Rash;<MDART>road-rash-1-md.png;<MD>Road Rash (USA, Europe).md
+Road Rash 3, Tour de Force;Road Rash 3;road-rash-3-md;Course%Action;Megadrive;2;Road Rash;<MDART>road-rash-3-md.png;<MD>Road Rash 3 (USA, Europe).md
+Road Rash II;Road Rash II;road-rash-2-md;Course%Action;Megadrive;2;Road Rash;<MDART>road-rash-2-md.png;<MD>Road Rash II (USA, Europe) (v1.2).md
+Rock'n Roll Racing;Rock'n Roll Racing;rock-n-roll-racing-md;Course%Action;Megadrive;2;;<MDART>rock-n-roll-racing-md.png;<MD>Rock n' Roll Racing (USA).md
+Rocket Knight Adventures;Rocket Knight Adventures;rocket-knight-adventures-md;Action%Plate-forme;Megadrive;1;;<MDART>rocket-knight-adventures-md.png;<MD>Rocket Knight Adventures (USA).md
+Sensible Soccer;Sensible Soccer;sensible-soccer-md;Sport;Megadrive;2;;<MDART>sensible-soccer-md.png;<MD>Sensible Soccer - International Edition (Europe) (En,Fr,De,It).md
+Shadow Dancer, The Secret of Shinobi;Shadow Dancer;shadow-dancer-md;Action%Plate-forme;Megadrive;1;Shinobi;<MDART>shadow-dancer-md.png;<MD>Shadow Dancer - The Secret of Shinobi (World).md
+Shadow of the Beast;Shadow of the Beast;shadow-of-the-beast;Action%Aventure;Megadrive;1;;<MDART>shadow-of-the-beast-md.png;<MD>Shadow of the Beast (USA, Europe).md
+Shining Force;Shining Force;shining-force-1-md;Aventure%Role;Megadrive;1;;<MDART>shining-force-1-md.png;<MD>Shining Force (USA).md
+Shining Force II;Shining Force II;shining-force-2-md;Aventure%Role;Megadrive;1;;<MDART>shining-force-2-md.png;<MD>Shining Force II (USA).md
+Shinobi III, Return of the Ninja Master;Shinobi III;shinobi-3-md;Action%Plate-forme;Megadrive;1;Shinobi;<MDART>shinobi-3-md.png;<MD>Shinobi III - Return of the Ninja Master (USA).md
+Soleil;Soleil;soleil-md;Action%Aventure;Megadrive;1;;<MDART>soleil-md.png;<MD>Soleil (France).md
+Sonic Spinball;Sonic Spinball;sonic-spinball-md;Action%Flipper;Megadrive;1;Sonic;<MDART>sonic-spinball-md.png;<MD>Sonic Spinball (Japan).md
+Sonic the Hedgehog;Sonic;sonic-1-md;Action%Plate-forme;Megadrive;1;Sonic;<MDART>sonic-1-md.png;<MD>Sonic The Hedgehog (USA, Europe).md
+Sonic the Hedgehog 2;Sonic 2;sonic-2-md;Action%Plate-forme;Megadrive;2;Sonic;<MDART>sonic-2-md.png;<MD>Sonic The Hedgehog 2 (World) (Rev A).md
+Sonic the Hedgehog 3;Sonic 3;sonic-3-md;Action%Plate-forme;Megadrive;2;Sonic;<MDART>sonic-3-md.png;<MD>Sonic The Hedgehog 3 (USA).md
+Sparkster;Sparkster;sparkster-md;Action%Plate-forme;Megadrive;1;;<MDART>sparkster-md.png;<MD>Sparkster (USA).md
+Speedball 2, Brutal Deluxe;Speedball 2;speedball-2-md;Sport;Megadrive;2;;<MDART>speedball-2-md.png;<MD>Speedball 2 - Brutal Deluxe (USA).md
+The Story of Thor;Story of Thor;story-of-thor-md;Action%Aventure;Megadrive;1;;<MDART>story-of-thor-md.png;<MD>Story of Thor, The (Europe).md
+Sub-Terrania;Sub-Terrania;sub-terrania-md;Shooter;Megadrive;1;;<MDART>sub-terrania-md.png;<MD>Sub-Terrania (USA).md
+Sunset Riders;Sunset Riders;sunset-riders-md;Action%Shooter;Megadrive;2;;<MDART>sunset-riders-md.png;<MD>Sunset Riders (USA).md
+Super Street Fighter II;Super Street Fighter II;super-street-fighter-2;Baston;Megadrive;2;Street Fighter;<MDART>super-street-fighter-2-md.png;<MD>Super Street Fighter II (USA).md
+Sylvester and Tweety in Cagey Capers;Cagey Capers;cagey-capers-md;Action%Plate-forme;Megadrive;1;Looney Tunes;<MDART>cagey-capers-md.png;<MD>Sylvester and Tweety in Cagey Capers (USA).md
+Taz-Mania;Taz-Mania;taz-mania-1-md;Plate-forme;Megadrive;1;Looney Tunes;<MDART>taz-mania-1-md.png;<MD>Taz-Mania (World).md
+Teenage Mutant Ninja Turtles, The Hyperstone Heist;Hyperstone Heist;hyperstone-heist-md;Baston;Megadrive;2;Tortues Ninja;<MDART>hyperstone-heist-md.png;<MD>Teenage Mutant Ninja Turtles - The Hyperstone Heist (USA).md
+Thunder Force II;Thunder Force II;thunder-force-2-md;Shooter;Megadrive;1;;<MDART>thunder-force-2-md.png;<MD>Thunder Force II (USA, Europe).md
+Thunder Force III;Thunder Force III;thunder-force-3-md;Shooter;Megadrive;1;;<MDART>thunder-force-3-md.png;<MD>Thunder Force III (Japan, USA).md
+Thunder Force IV;Thunder Force IV;thunder-force-4-md;Shooter;Megadrive;1;;<MDART>thunder-force-4-md.png;<MD>Thunder Force IV (Japan).md
+Tiny Toon Adventures, Buster's Hidden Treasure;Tiny Toon Adventures;tiny-toon-md;Plate-forme;Megadrive;1;;<MDART>tiny-toon-md.png;<MD>Tiny Toon Adventures - Buster's Hidden Treasure (USA).md
+Toejam and Earl;Toejam and Earl;toejam-and-earl-1-md;Action;Megadrive;2;;<MDART>toejam-and-earl-1-md.png;<MD>ToeJam & Earl (World).md
+Toy Story;Toy Story;toy-story-md;Plate-forme;Megadrive;1;Disney;<MDART>toy-story-md.png;<MD>Toy Story (USA).md
+Ultimate Mortal Kombat 3;UMK3;ultimate-mortal-kombat-3-md;Baston;Megadrive;2;Mortal Kombat;<MDART>ultimate-mortal-kombat-3-md.png;<MD>Ultimate Mortal Kombat 3 (USA).md
+Urban Strike;Urban Strike;urban-strike;Action;Megadrive;1;;<MDART>urban-strike-md.png;<MD>Urban Strike (USA, Europe).md
+Vectorman;Vectorman;vectorman-1-md;Action%Shooter;Megadrive;1;;<MDART>vectorman-1-md.png;<MD>Vectorman (USA, Europe).md
+Vectorman 2;Vectorman 2;vectorman-2-md;Action%Shooter;Megadrive;1;;<MDART>vectorman-2-md.png;<MD>Vectorman 2 (USA).md
+Virtua Racing;Virtua Racing;virtua-racing-md;Course;Megadrive;2;;<MDART>virtua-racing-md.png;<MD>Virtua Racing (USA).md
+Virtual Pinball;Virtual Pinball;virtual-pinball-md;Flipper;Megadrive;1;;<MDART>virtual-pinball-md.png;<MD>Virtual Pinball (USA, Europe).md
+Wiz'n Liz;Wiz'n Liz;wiz-n-liz;Action%Plate-forme;Megadrive;2;;<MDART>wiz-n-liz-md.png;<MD>Wiz'n'Liz (USA).md
+Wonder Boy in Monster World;Wonder Boy 5;wonder-boy-5-md;Action%Plate-forme%Aventure;Megadrive;1;Wonder Boy;<MDART>wonder-boy-5-md.png;<MD>Wonder Boy in Monster World (USA, Europe).md
+World of Illusion Starring Mickey Mouse and Donald Duck;World of Illusion;world-of-illusion-md;Plate-forme;Megadrive;2;;<MDART>world-of-illusion-md.png;<MD>World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea).md
+Aladdin;Aladdin;aladdin-gg;Plate-forme;Game Gear;1;Disney;<GGART>aladdin-gg.png;<GG>Aladdin (USA, Europe).gg
+Asterix and the Secret Mission;Asterix;asterix-gg;Plate-forme;Game Gear;1;Asterix;<GGART>asterix-gg.png;<GG>Asterix and the Secret Mission (Europe) (En,Fr,De).gg
+Batman Returns;Batman Returns;batman-returns-gg;Plate-forme;Game Gear;1;Batman;<GGART>batman-returns-gg.png;<GG>Batman Returns (World).gg
+Bram Stoker's Dracula;Dracula;dracula-gg;Plate-forme;Game Gear;1;;<GGART>dracula-gg.png;<GG>Bram Stoker's Dracula (USA).gg
+Crystal Warriors;Crystal Warriors;crystal-warriors-gg;Strategie%Role;Game Gear;1;;<GGART>crystal-warriors-gg.png;<GG>Crystal Warriors (USA, Europe).gg
+Defenders of Oasis;Defenders of Oasis;defenders-of-oasis-gg;Aventure%Role;Game Gear;1;;<GGART>defenders-of-oasis-gg.png;<GG>Defenders of Oasis (USA, Europe).gg
+The GG Shinobi;Shinobi;shinobi-1-gg;Plate-forme;Game Gear;1;Shinobi;<GGART>shinobi-1-gg.png;<GG>GG Shinobi, The (Japan).gg
+Jurassic Park;Jurassic Park;jurassic-park-gg;Plate-forme%Action;Game Gear;1;;<GGART>jurassic-park-gg.png;<GG>Jurassic Park (USA, Europe).gg
+Land of Illusion Starring Mickey Mouse;Land of Illusion;land-of-illusion-gg;Plate-forme;Game Gear;1;Disney;<GGART>land-of-illusion-gg.png;<GG>Land of Illusion Starring Mickey Mouse (USA, Europe).gg
+Legend of Illusion Starring Mickey Mouse;Legend of Illusion;legend-of-illusion-gg;Plate-forme;Game Gear;1;Disney;<GGART>legend-of-illusion-gg.png;<GG>Legend of Illusion Starring Mickey Mouse (USA, Europe).gg
+Psychic World;Psychic World;psychic-world-gg;Plate-forme%Action;Game Gear;1;;<GGART>psychic-world-gg.png;<GG>Psychic World (USA, Europe) (Rev 1).gg
+Shinobi II, the Silent Fury;Shinobi II;shinobi-2-gg;Plate-forme;Game Gear;1;Shinobi;<GGART>shinobi-2-gg.png;<GG>Shinobi II - The Silent Fury (World) (Ja).gg
+Sonic the Hedgehog;Sonic;sonic-1-gg;Plate-forme;Game Gear;1;Sonic;<GGART>sonic-1-gg.png;<GG>Sonic The Hedgehog (World) (Rev 1).gg
+Sonic the Hedgehog 2;Sonic 2;sonic-2-gg;Plate-forme;Game Gear;1;Sonic;<GGART>sonic-2-gg.png;<GG>Sonic The Hedgehog 2 (World).gg
+Wonder Boy;Wonder Boy;wonder-boy-1-gg;Plate-forme;Game Gear;1;Wonder Boy;<GGART>wonder-boy-1-gg.png;<GG>Wonder Boy (Europe).gg
+Wonder Boy III, the Dragon's Trap;Wonder Boy III;wonder-boy-3-gg;Plate-forme%Aventure;Game Gear;1;Wonder Boy;<GGART>wonder-boy-3-gg.png;<GG>Wonder Boy - The Dragon's Trap (Europe).gg
+Alex Kidd in Miracle World;Alex Kidd;alex-kidd-ms;Plate-forme;Master System;1;;<MSART>alex-kidd-ms.png;<MS>Alex Kidd in Miracle World (USA, Europe) (Rev 1).sms
+Asterix;Asterix;asterix-ms;Plate-forme;Master System;2;Asterix;<MSART>asterix-ms.png;<MS>Asterix (Europe) (En,Fr) (Rev 1).sms
+Castle of Illusion, Starring Mickey Mouse;Castle of Illusion;castle-illusion-ms;Plate-forme;Master System;1;Disney;<MSART>castle-of-illusion-ms.png;<MS>Castle of Illusion Starring Mickey Mouse (USA).sms
+Double Dragon;Double Dragon;double-dragon-ms;Baston;Master System;2;;<MSART>double-dragon-ms.png;<MS>Double Dragon (World).sms
+The Lucky Dime Caper Starring Donald Duck;The Lucky Dime Caper;lucky-dime-caper-ms;Plate-forme;Master System;1;Disney;<MSART>lucky-dime-caper-ms.png;<MS>Lucky Dime Caper Starring Donald Duck, The (Europe).sms
+Ninja Gaiden;Ninja Gaiden;ninja-gaiden-1-ms;Plate-forme%Action;Master System;1;;<MSART>ninja-gaiden-ms.png;<MS>Ninja Gaiden (Europe).sms
+RC Grand Prix;RC Grand Prix;rc-grand-prix-ms;Course;Master System;2;;<MSART>rc-grand-prix-ms.png;<MS>R.C. Grand Prix (USA, Europe).sms
+Les Schtroumpfs;Les Schtroumpfs;schtroumpfs-ms;Plate-forme;Master System;1;;<MSART>schtroumpfs-ms.png;<MS>Smurfs, The (Europe) (En,Fr,De,Es).sms
+Wolfchild;Wolfchild;wolfchild-ms;Plate-forme;Master System;1;;<MSART>wolfchild-ms.png;<MS>Wolfchild (Europe).sms
+Wonder Boy in Monster Land;Wonder Boy II;wonder-boy-2-ms;Plate-forme%Aventure;Master System;1;Wonder Boy;<MSART>wonder-boy-2-ms.png;<MS>Wonder Boy in Monster Land (USA, Europe).sms
+Asterix;Asterix;asterix-arc;Baston;Arcade;2;Asterix;<ARCART>asterix-arc.png;<ARCADE>asterix
+Skull Monkeys;Skull Monkeys;skull-monkeys-ps;Plate-forme;Playstation;1;;<PSART>skull-monkeys-ps.png;PCSX_WIDTH=720 <PSX>Skullmonkeys.cue
+Castlevania, Symphony of the Night;Castlevania;castlevania-ps;Plate-forme;Playstation;1;Castlevania;<PSART>castlevania-ps.png;PCSX_WIDTH=720 <PSX>Castlevania - Symphony of the Night.cue
+WipEout;WipEout;wipeout-1-ps;Course;Playstation;2;;<PSART>wipeout-1-ps.png;PCSX_WIDTH=720 <PSX>WipEout.cue
+Rayman;Rayman;rayman-1-ps;Plate-forme;Playstation;1;;<PSART>rayman-1-ps.png;PCSX_WIDTH=720 <PSX>Rayman.cue
+WipEout XL;WipEout XL;wipeout-2-ps;Course;Playstation;2;;<PSART>wipeout-2-ps.png;PCSX_WIDTH=720 <PSX>WipEout XL.cue
+R4, Ridge Racer Type 4;Ridge Racer 4;ridge-racer-4-ps;Course;Playstation;2;;<PSART>ridge-racer-4-ps.png;PCSX_WIDTH=720 <PSX>R4 - Ridge Racer Type 4.cue
+Soul Blade;Soul Blade;soul-blade-ps;Baston;Playstation;2;;<PSART>soul-blade-ps.png;PCSX_WIDTH=720 <PSX>Soul Blade (v1.1).cue
+Duke Nukem 3D;Duke Nukem 3D;duke-nukem-3d-pc;FPS%Action;PC;1;;<PCART>duke-nukem-3d-pc.png;eduke32
+Adventure Island III;Adventure Island III;adventure-island-3-nes;Plate-forme;NES;1;Wonder Boy;<NESART>adventure-island-3-nes.png;<NES>Adventure Island 3 (USA).nes
+Adventure Island 2;Adventure Island 2;adventure-island-2-nes;Plate-forme;NES;1;Wonder Boy;<NESART>adventure-island-2-nes.png;<NES>Adventure Island II (USA).nes
+Adventures of Lolo;Adventures of Lolo;adventures-of-lolo-1-nes;Puzzle;NES;1;;<NESART>adventures-of-lolo-1-nes.png;<NES>Adventures of Lolo (USA).nes
+Adventures of Lolo 2;Adventures of Lolo 2;adventures-of-lolo-2-nes;Puzzle;NES;1;;<NESART>adventures-of-lolo-2-nes.png;<NES>Adventures of Lolo 2 (USA).nes
+Adventures of Lolo 3;Adventures of Lolo 3;adventures-of-lolo-3-nes;Puzzle;NES;1;;<NESART>adventures-of-lolo-3-nes.png;<NES>Adventures of Lolo 3 (USA).nes
+Batman, Return of the Joker;Batman 2;batman-2-nes;Plate-forme;NES;1;Batman;<NESART>batman-2-nes.png;<NES>Batman - Return of the Joker (USA).nes
+Batman, the Video Game;Batman;batman-1-nes;Plate-forme;NES;1;Batman;<NESART>batman-1-nes.png;<NES>Batman - The Video Game (USA).nes
+Castlevania;Castlevania;castlevania-1-nes;Plate-forme;NES;1;Castlevania;<NESART>castlevania-1-nes.png;<NES>Castlevania (USA) (Rev A).nes
+Castlevania II, Simon's Quest;Castlevania II;castlevania-2-nes;Plate-forme;NES;1;Castlevania;<NESART>castlevania-2-nes.png;<NES>Castlevania II - Simon's Quest (USA).nes
+Castlevania III, Dracula's Curse;Castlevania III;castlevania-3-nes;Plate-forme;NES;1;Castlevania;<NESART>castlevania-3-nes.png;<NES>Castlevania III - Dracula's Curse (USA).nes
+Chip'n Dale, Rescue Rangers;Chip'n Dale;chip-n-dale-1-nes;Plate-forme;NES;1;Disney;<NESART>chip-n-dale-1-nes.png;<NES>Chip 'n Dale - Rescue Rangers (USA).nes
+Chip'n Dale, Rescue Rangers 2;Chip'n Dale 2;chip-n-dale-2-nes;Plate-forme;NES;1;Disney;<NESART>chip-n-dale-2-nes.png;<NES>Chip 'n Dale - Rescue Rangers 2 (USA).nes
+Darkwing Duck;Darkwing Duck;darkwing-duck-nes;Plate-forme;NES;1;Disney;<NESART>darkwing-duck-nes.png;<NES>Darkwing Duck (USA).nes
+Dr Mario;Dr Mario;dr-mario-nes;Puzzle;NES;2;Mario;<NESART>dr-mario-nes.png;<NES>Dr. Mario (Japan, USA) (Rev A).nes
+DuckTales;DuckTales;ducktales-1-nes;Plate-forme;NES;1;Disney;<NESART>ducktales-1-nes.png;<NES>DuckTales (USA).nes
+DuckTales 2 ;DuckTales 2;ducktales-2-nes;Plate-forme;NES;1;Disney;<NESART>ducktales-2-nes.png;<NES>DuckTales 2 (France).nes
+Gremlins 2, the New Batch;Gremlins 2;gremlins-2-nes;Action;NES;1;;<NESART>gremlins-2-nes.png;<NES>Gremlins 2 - The New Batch (USA).nes
+Ikari III, the Rescue;Ikari III;ikari-3-nes;Action;NES;2;;<NESART>ikari-3-nes.png;<NES>Ikari III - The Rescue (USA).nes
+Ikari Warriors;Ikari Warriors;ikari-warriors-1-nes;Action;NES;2;;<NESART>ikari-warriors-1-nes.png;<NES>Ikari Warriors (USA) (Rev A).nes
+Ikari Warriors II, Victory Road;Ikari Warriors II;ikari-warriors-2-nes;Action;NES;2;;<NESART>ikari-warriors-2-nes.png;<NES>Ikari Warriors II - Victory Road (USA).nes
+Kid Icarus;Kid Icarus;kid-icarus-nes;Plate-forme;NES;1;;<NESART>kid-icarus-nes.png;<NES>Kid Icarus (USA, Europe).nes
+Kirby's Adventure;Kirby's Adventure;kirby-s-adventure-nes;Plate-forme;NES;1;;<NESART>kirby-s-adventure-nes.png;<NES>Kirby's Adventure (France).nes
+The Legend of Zelda;The Legend of Zelda;legend-of-zelda-nes;Aventure%Role;NES;1;Zelda;<NESART>legend-of-zelda-nes.png;<NES>Legend of Zelda, The (USA) (Rev A).nes
+Mega Man;Mega Man;mega-man-1-nes;Plate-forme;NES;1;Mega Man;<NESART>mega-man-1-nes.png;<NES>Mega Man (USA).nes
+Mega Man 2;Mega Man 2;mega-man-2-nes;Plate-forme;NES;1;Mega Man;<NESART>mega-man-2-nes.png;<NES>Mega Man 2 (USA).nes
+Mega Man 3;Mega Man 3;mega-man-3-nes;Plate-forme;NES;1;Mega Man;<NESART>mega-man-3-nes.png;<NES>Mega Man 3 (USA).nes
+Mega Man 4;Mega Man 4;mega-man-4-nes;Plate-forme;NES;1;Mega Man;<NESART>mega-man-4-nes.png;<NES>Mega Man 4 (USA).nes
+Mega Man 5;Mega Man 5;mega-man-5-nes;Plate-forme;NES;1;Mega Man;<NESART>mega-man-5-nes.png;<NES>Mega Man 5 (USA).nes
+Mega Man 6;Mega Man 6;mega-man-6-nes;Plate-forme;NES;1;Mega Man;<NESART>mega-man-6-nes.png;<NES>Mega Man 6 (USA).nes
+Metal Gear;Metal Gear;metal-gear-nes;Action;NES;1;;<NESART>metal-gear-nes.png;<NES>Metal Gear (USA).nes
+Metroid;Metroid;metroid-nes;Plate-forme%Aventure;NES;1;;<NESART>metroid-nes.png;<NES>Metroid (USA).nes
+Ninja Gaiden;Ninja Gaiden;ninja-gaiden-1-nes;Plate-forme%Action;NES;1;;<NESART>ninja-gaiden-1-nes.png;<NES>Ninja Gaiden (USA).nes
+Ninja Gaiden II - The Dark Sword of Chaos;Ninja Gaiden II;ninja-gaiden-2-nes;Plate-forme%Action;NES;1;;<NESART>ninja-gaiden-2-nes.png;<NES>Ninja Gaiden II - The Dark Sword of Chaos (USA).nes
+Ninja Gaiden III - The Ancient Ship of Doom;Ninja Gaiden III;ninja-gaiden-3-nes;Plate-forme%Action;NES;1;;<NESART>ninja-gaiden-3-nes.png;<NES>Ninja Gaiden III - The Ancient Ship of Doom (USA).nes
+Parodius;Parodius;parodius-nes;Shooter;NES;2;;<NESART>parodius-nes.png;<NES>Parodius (Europe).nes
+RC Pro-Am;RC Pro-Am;rc-pro-am-1-nes;Course;NES;2;;<NESART>rc-pro-am-1-nes.png;<NES>R.C. Pro-Am (USA).nes
+RC Pro-Am II;RC Pro-Am II;rc-pro-am-2-nes;Course;NES;2;;<NESART>rc-pro-am-2-nes.png;<NES>R.C. Pro-Am II (USA).nes
+Solstice, the Quest for the Staff of Demnos;Solstice;solstice-nes;Action%Aventure;NES;1;;<NESART>solstice-nes.png;<NES>Solstice - The Quest for the Staff of Demnos (USA).nes
+Star Wars;Star Wars;star-wars-1-nes;Plate-forme;NES;1;;<NESART>star-wars-1-nes.png;<NES>Star Wars (USA).nes
+Star Wars, the Empire Strikes Back;Star Wars II;star-wars-2-nes;Plate-forme;NES;1;;<NESART>star-wars-2-nes.png;<NES>Star Wars - The Empire Strikes Back (USA).nes
+Super Mario Bros;Super Mario Bros;super-mario-bros-1-nes;Plate-forme;NES;2;Mario;<NESART>super-mario-bros-1-nes.png;<NES>Super Mario Bros. (World).nes
+Super Mario Bros II;Super Mario Bros II;super-mario-bros-2-nes;Plate-forme;NES;2;Mario;<NESART>super-mario-bros-2-nes.png;<NES>Super Mario Bros. 2 (USA) (Rev A).nes
+Super Mario Bros III;Super Mario Bros III;super-mario-bros-3-nes;Plate-forme;NES;2;Mario;<NESART>super-mario-bros-3-nes.png;<NES>Super Mario Bros. 3 (USA) (Rev A).nes
+Teenage Mutant Ninja Turtles;Teenage Mutant Ninja Turtles;teenage-mutant-ninja-turtles-nes;Plate-forme;NES;2;;<NESART>teenage-mutant-ninja-turtles-nes.png;<NES>Teenage Mutant Ninja Turtles (USA).nes
+Willow;Willow;willow-nes;Action%Aventure;NES;1;;<NESART>willow-nes.png;<NES>Willow (USA).nes
+Zelda II, the adventure of Link;Zelda II;zelda-2-nes;Aventure%Role;NES;1;Zelda;<NESART>zelda-2-nes.png;<NES>Zelda II - The Adventure of Link (USA).nes
+Adventure Island;Adventure Island;adventure-island-gb;Plate-forme;Game Boy;1;Wonder Boy;<GBART>adventure-island-gb.png;<GB>Adventure Island (USA, Europe).gb
+The Legend of Zelda, Link's awakening;Link's Awakening;zelda-gb;Aventure%Role;Game Boy;1;Zelda;<GBART>zelda-gb.png;<GB>Legend of Zelda, The - Link's Awakening (France).gb
+Mario's Picross;Mario's Picross;marios-picross-gb;Puzzle;Game Boy;1;Mario;<GBART>marios-picross-gb.png;<GB>Mario's Picross (USA, Europe) (SGB Enhanced).gb
+Les Schtroumpfs;Les Schtroumpfs;schtroumpfs-gb;Plate-forme;Game Boy;1;;<GBART>schtroumpfs-gb.png;<GB>Smurfs, The (Europe) (En,Fr,De,Es).gb
+Super Mario Land;Super Mario Land;super-mario-land-1-gb;Plate-forme;Game Boy;1;Mario;<GBART>super-mario-land-1-gb.png;<GB>Super Mario Land (World) (Rev A).gb
+Super Mario Land 2, 6 Golden Coins;Super Mario Land 2;super-mario-land-2-gb;Plate-forme;Game Boy;1;Mario;<GBART>super-mario-land-2-gb.png;<GB>Super Mario Land 2 - 6 Golden Coins (USA, Europe) (Rev B).gb
+Tetris;Tetris;tetris-gb;Puzzle;Game Boy;1;;<GBART>tetris-gb.png;<GB>Tetris (World) (Rev A).gb
+Aladdin;Aladdin;aladdin-snes;Plate-forme;Super NES;1;Disney;<SNESART>aladdin-snes.png;<SNES>Aladdin (USA).sfc
+Another World;Another World;another-world-snes;Plate-forme%Aventure;Super NES;1;;<SNESART>another-world-snes.png;<SNES>Another World (Europe).sfc
+Asterix & Obelix;Asterix & Obelix;asterix-and-obelix-snes;Plate-forme;Super NES;1;Asterix;<SNESART>asterix-and-obelix-snes.png;<SNES>Asterix & Obelix (Europe) (En,Fr,De,Es).sfc
+Asterix;Asterix;asterix-snes;Plate-forme;Super NES;1;Asterix;<SNESART>asterix-snes.png;<SNES>Asterix (Europe) (En,Fr,De,Es).sfc
+Battletoads in Battlemaniacs;Battletoads;battletoads-snes;Baston;Super NES;2;;<SNESART>battletoads-snes.png;<SNES>Battletoads in Battlemaniacs (USA).sfc
+Castlevania, Dracula X;Castlevania 4;castlevania-4-snes;Plate-forme;Super NES;1;Castlevania;<SNESART>castlevania-4-snes.png;<SNES>Castlevania - Dracula X (USA).sfc
+Choplifter III, Rescue, Survive;Choplifter III;choplifter-3-snes;Action;Super NES;1;;<SNESART>choplifter-3-snes.png;<SNES>Choplifter III - Rescue-Survive (USA).sfc
+Chrono Trigger;Chrono Trigger;chrono-trigger-snes;Aventure%Role;Super NES;1;;<SNESART>chrono-trigger-snes.png;<SNES>Chrono Trigger (USA).sfc
+Donkey Kong Country;Donkey Kong Country;donkey-kong-country-1-snes;Plate-forme;Super NES;1;;<SNESART>donkey-kong-country-1-snes.png;<SNES>Donkey Kong Country (USA) (Rev 2).sfc
+Donkey Kong Country 2, Diddy Kong's Quest;Donkey Kong Country 2;donkey-kong-country-2-snes;Plate-forme;Super NES;1;;<SNESART>donkey-kong-country-2-snes.png;<SNES>Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr) (Rev 1).sfc
+Donkey Kong Country 3, Dixie Kong's Double Trouble!;Donkey Kong Country 3;donkey-kong-country-3-snes;Plate-forme;Super NES;1;;<SNESART>donkey-kong-country-3-snes.png;<SNES>Donkey Kong Country 3 - Dixie Kong's Double Trouble! (USA) (En,Fr).sfc
+F-Zero;F-Zero;f-zero-snes;Course;Super NES;2;;<SNESART>f-zero-snes.png;<SNES>F-Zero (USA).sfc
+Final Fantasy II;Final Fantasy II;final-fantasy-2-snes;Aventure%Role;Super NES;1;;<SNESART>final-fantasy-2-snes.png;<SNES>Final Fantasy II (USA) (Rev 1).sfc
+Final Fantasy III;Final Fantasy III;final-fantasy-3-snes;Aventure%Role;Super NES;1;;<SNESART>final-fantasy-3-snes.png;<SNES>Final Fantasy III (USA) (Rev 1).sfc
+Final Fantasy IV;Final Fantasy IV;final-fantasy-4-snes;Aventure%Role;Super NES;1;;<SNESART>final-fantasy-4-snes.png;<SNES>Final Fantasy IV (Japan) (Rev 1).sfc
+Mystic Quest;Mystic Quest;mystic-quest-snes;Aventure%Role;Super NES;1;;<SNESART>mystic-quest-snes.png;<SNES>Final Fantasy USA - Mystic Quest (Japan).sfc
+Final Fantasy V;Final Fantasy V;final-fantasy-5-snes;Aventure%Role;Super NES;1;;<SNESART>final-fantasy-5-snes.png;<SNES>Final Fantasy V (Japan).sfc
+Final Fantasy VI;Final Fantasy VI;final-fantasy-6-snes;Aventure%Role;Super NES;1;;<SNESART>final-fantasy-6-snes.png;<SNES>Final Fantasy VI (Japan).sfc
+Final Fight;Final Fight;final-fight-1-snes;Baston;Super NES;2;;<SNESART>final-fight-1-snes.png;<SNES>Final Fight (USA).sfc
+Final Fight 2;Final Fight 2;final-fight-2-snes;Baston;Super NES;2;;<SNESART>final-fight-2-snes.png;<SNES>Final Fight 2 (USA).sfc
+Final Fight 3;Final Fight 3;final-fight-3-snes;Baston;Super NES;2;;<SNESART>final-fight-3-snes.png;<SNES>Final Fight 3 (USA).sfc
+The Firemen;The Firemen;firemen-snes;Action;Super NES;2;;<SNESART>firemen-snes.png;<SNES>Firemen, The (Europe) (En,Fr,De).sfc
+International Superstar Soccer Deluxe;ISS Deluxe;iss-deluxe-snes;Sport;Super NES;2;;<SNESART>iss-deluxe-snes.png;<SNES>International Superstar Soccer Deluxe (USA).sfc
+The Itchy and Scratchy Game;Itchy and Scratchy;itchy-and-scratchy-snes;Action;Super NES;1;;<SNESART>itchy-and-scratchy-snes.png;<SNES>Itchy & Scratchy Game, The (USA).sfc
+Jurassic Park;Jurassic Park;jurassic-park-snes;Action%Aventure;Super NES;1;;<SNESART>jurassic-park-snes.png;<SNES>Jurassic Park (USA) (Rev 1).sfc
+Killer Instinct;Killer Instinct;killer-instinct-snes;Baston;Super NES;2;;<SNESART>killer-instinct-snes.png;<SNES>Killer Instinct (USA) (Rev 1).sfc
+The Legend of Zelda, a Link to the Past;A Link to the past;a-link-to-the-past-snes;Action%Aventure;Super NES;1;Zelda;<SNESART>a-link-to-the-past-snes.png;<SNES>Legend of Zelda, The - A Link to the Past (France).sfc
+Mario Paint;Mario Paint;mario-paint;Inclassable;Super NES;1;Mario;<SNESART>mario-paint-snes.png;<SNES>Mario Paint (Europe).sfc
+Mega Man 7;Mega Man 7;mega-man-7-snes;Plate-forme;Super NES;1;Mega Man;<SNESART>mega-man-7-snes.png;<SNES>Mega Man 7 (USA).sfc
+Mega Man X;Mega Man X;mega-man-8-snes;Plate-forme;Super NES;1;Mega Man;<SNESART>mega-man-8-snes.png;<SNES>Mega Man X (USA).sfc
+Mega Man X2;Mega Man X2;mega-man-9-snes;Plate-forme;Super NES;1;Mega Man;<SNESART>mega-man-9-snes.png;<SNES>Mega Man X2 (USA).sfc
+Mega Man X3;Mega Man X3;mega-man-A-snes;Plate-forme;Super NES;1;Mega Man;<SNESART>mega-man-a-snes.png;<SNES>Mega Man X3 (USA).sfc
+NBA Jam, Tournament Edition;NBA Jam;nba-jam-snes;Sport;Super NES;2;;<SNESART>nba-jam-snes.png;<SNES>NBA Jam - Tournament Edition (USA).sfc
+Ninja Gaiden Trilogy;Ninja Gaiden Trilogy;ninja-gaiden-trilogy-snes;Plate-forme;Super NES;1;;<SNESART>ninja-gaiden-trilogy-snes.png;<SNES>Ninja Gaiden Trilogy (USA).sfc
+Parodius;Parodius;parodius-snes;Shooter;Super NES;1;;<SNESART>parodius-snes.png;<SNES>Parodius (Europe).sfc
+Pilotwings;Pilotwings;pilotwings-snes;Simulateur;Super NES;1;;<SNESART>pilotwings-snes.png;<SNES>Pilotwings (USA).sfc
+R-Type III;R-Type III;rtype-3-snes;Shooter;Super NES;1;;<SNESART>rtype-3-snes.png;<SNES>R-Type III (USA).sfc
+The Secret of Mana;The Secret of Mana;secret-of-mana-snes;Aventure%Role;Super NES;2;;<SNESART>secret-of-mana-snes.png;<SNES>Secret of Mana (France) (Rev 1).sfc
+Star Fox;Star Fox;star-fox-snes;Shooter;Super NES;1;;<SNESART>star-fox-snes.png;<SNES>Star Fox (USA) (Rev 2).sfc
+Street Racer;Street Racer;street-racer-snes;Course;Super NES;2;;<SNESART>street-racer-snes.png;<SNES>Street Racer (USA).sfc
+Super Mario All-Stars;Super Mario All-Stars;super-mario-all-stars-snes;Plate-forme;Super NES;2;Mario;<SNESART>super-mario-all-stars-snes.png;<SNES>Super Mario All-Stars (USA).sfc
+Super Mario Kart;Super Mario Kart;super-mario-kart-snes;Course;Super NES;2;Mario;<SNESART>super-mario-kart-snes.png;<SNES>Super Mario Kart (USA).sfc
+Super Mario RPG, Legend of the Seven Stars;Super Mario RPG;super-mario-rpg-snes;Aventure%Role;Super NES;1;Mario;<SNESART>super-mario-rpg-snes.png;<SNES>Super Mario RPG - Legend of the Seven Stars (USA).sfc
+Super Mario World;Super Mario World;super-mario-world-1-snes;Plate-forme;Super NES;1;Mario;<SNESART>super-mario-world-1-snes.png;<SNES>Super Mario World (USA).sfc
+Super Mario World 2, Yoshi's Island;Super Mario World 2;super-mario-world-2-snes;Plate-forme;Super NES;1;Mario;<SNESART>super-mario-world-2-snes.png;<SNES>Super Mario World 2 - Yoshi's Island (USA) (Rev 1).sfc
+Super Metroid;Super Metroid;super-metroid-snes;Plate-forme%Aventure;Super NES;1;;<SNESART>super-metroid-snes.png;<SNES>Super Metroid (Europe) (En,Fr,De).sfc
+Super Star Wars;Super Star Wars;super-star-wars-1-snes;Plate-forme;Super NES;1;Star Wars;<SNESART>super-star-wars-1-snes.png;<SNES>Super Star Wars (USA) (Rev 1).sfc
+Super Star Wars, Return of the Jedi;Super Star Wars III;super-star-wars-3-snes;Plate-forme;Super NES;1;Star Wars;<SNESART>super-star-wars-3-snes.png;<SNES>Super Star Wars - Return of the Jedi (USA) (Rev 1).sfc
+Young Merlin;Young Merlin;young-merlin-snes;Aventure%Role;Super NES;1;;<SNESART>young-merlin-snes.png;<SNES>Young Merlin (USA).sfc
+Space Harrier;Space Harrier;space-harrier-1-arc;Action%Shooter;Arcade;1;;<ARCART>space-harrier-1-arc.png;<ARCADE>sharrier
+Space Harrier 2;Space Harrier 2;space-harrier-2-arc;Action%Shooter;Arcade;1;;<ARCART>space-harrier-2-arc.png;<ARCADE>sharrier2
+Burnin' Rubber;Burnin' Rubber;burnin-rubber-arc;Course;Arcade;1;;<ARCART>burnin-rubber-arc.png;<ARCADE>brubber
+Out Run;Out Run;out-run-arc;Course;Arcade;1;;<ARCART>out-run-arc.png;<ARCADE>outrun
+After Burner;After Burner;after-burner-1-arc;Action%Shooter;Arcade;1;;<ARCART>after-burner-1-arc.png;<ARCADE>aburner
+After Burner II;After Burner II;after-burner-2-arc;Action%Shooter;Arcade;1;;<ARCART>after-burner-2-arc.png;<ARCADE>aburner2
+Metal Slug X;Metal Slug X;metal-slug-x-ng;Action%Shooter;Neo-Geo;2;;<NGART>metal-slug-x-ng.png;<NG>mslugx
+Breakers;Breakers;breakers-ng;Baston;Neo-Geo;2;;<NGART>breakers-ng.png;<NG>breakers
+WindJammers;WindJammers;windjammers-ng;Sport;Neo-Geo;2;;<NGART>windjammers-ng.png;<NG>wjammers
+Crash Bandicoot;Crash Bandicoot;crash-bandicoot-1-ps;Plate-forme;Playstation;1;;<PSART>crash-bandicoot-1-ps.png;PCSX_WIDTH=720 <PSX>Crash Bandicoot.cue
+Pandemonium;Pandemonium;pandemonium-1-ps;Plate-forme;Playstation;1;;<PSART>pandemonium-1-ps.png;PCSX_WIDTH=720 <PSX>Pandemonium.cue
+Micro Machines V3;Micro Machines V3;micro-machines-v3-ps;Plate-forme;Playstation;2;;<PSART>micro-machines-v3-ps.png;PCSX_WIDTH=720 <PSX>Micro Machines V3.cue
+Moto Racer;Moto Racer;moto-racer-1-ps;Course;Playstation;2;;<PSART>moto-racer-1-ps.png;PCSX_WIDTH=720 <PSX>Moto Racer.cue
+Pang;Pang;pang-arc;Shooter;Arcade;1;;<ARCART>pang-arc.png;<ARCADE>pang
+Sunset Riders;Sunset Riders;sunset-riders-arc;Action%Shooter;Arcade;2;;<ARCART>sunset-riders-arc.png;<ARCADE>ssriders
+Garou: Mark of the wolves;Garou;garou-ng;Baston;Neo-Geo;2;;<NGART>garou-ng.png;<NG>garou
+Kabuki Klash;Kabuki Klash;kabuki-klash-ng;Baston;Neo-Geo;2;;<NGART>kabuki-klash-ng.png;<NG>kabukikl
+King of the Monsters;King of Monsters;king-of-the-monsters-1-ng;Baston;Neo-Geo;2;;<NGART>king-of-the-monsters-1-ng.png;<NG>kotm
+King of the Monsters 2;King of Monsters 2;king-of-the-monsters-2-ng;Baston;Neo-Geo;2;;<NGART>king-of-the-monsters-2-ng.png;<NG>kotm2
+Last Blade 2;Last Blade 2;last-blade-2-ng;Baston;Neo-Geo;2;;<NGART>last-blade-2-ng.png;<NG>lastbld2
+Metal Slug;Metal Slug;metal-slug-1-ng;Action%Shooter;Neo-Geo;2;Metal Slug;<NGART>metal-slug-1-ng.png;<NG>mslug
+Metal Slug 2;Metal Slug 2;metal-slug-2-ng;Action%Shooter;Neo-Geo;2;Metal Slug;<NGART>metal-slug-2-ng.png;<NG>mslug2
+Metal Slug 4;Metal Slug 4;metal-slug-4-ng;Action%Shooter;Neo-Geo;2;Metal Slug;<NGART>metal-slug-4-ng.png;<NG>mslug4
+Samurai Shodown 4;Samurai Shodown 4;samurai-shodown-4-ng;Baston;Neo-Geo;2;;<NGART>samurai-shodown-4-ng.png;<NG>samsho4
+Aero Fighters 2;Aero Fighters 2;aero-fighters-2-ng;Shooter;Neo-Geo;2;;<NGART>aero-fighters-2-ng.png;<NG>sonicwi2
+Twinkle Star Sprites;Twinkle Star Sprites;twinkle-star-sprites-ng;Shooter;Neo-Geo;2;;<NGART>twinkle-star-sprites-ng.png;<NG>twinspri
+Bubble Bobble;Bubble Bobble;bubble-bobble-1-nes;Arcade;NES;2;;<NESART>bubble-bobble-1-nes.png;<NES>Bubble Bobble (USA).nes
+Harry Potter and the Sorcerer's Stone;Harry Potter 1;harry-potter-1-ps;Action;Playstation;1;;<PSART>harry-potter-1-ps.png;PCSX_WIDTH=720 <PSX>Harry Potter and the Sorcerer's Stone.cue
+Ridge Racer;Ridge Racer;ridge-racer-1-ps;Course;Playstation;2;;<PSART>ridge-racer-1-ps.png;PCSX_WIDTH=720 <PSX>Ridge Racer.cue
+Arkanoid;Arkanoid;arkanoid-1-nes;Arcade;NES;1;;<NESART>arkanoid-1-nes.png;<NES>Arkanoid (USA).nes
+Arkanoid II;Arkanoid II;arkanoid-2-nes;Arcade;NES;1;;<NESART>arkanoid-2-nes.png;<NES>Arkanoid II (Japan).nes
+Boulder Dash;Boulder Dash;boulder-dash-nes;Arcade;NES;1;;<NESART>boulder-dash-nes.png;<NES>Boulder Dash (USA).nes
+Bubble Bobble Part 2;Bubble Bobble 2;bubble-bobble-2-nes;Arcade;NES;2;;<NESART>bubble-bobble-2-nes.png;<NES>Bubble Bobble Part 2 (USA).nes
+Burai Fighter;Burai Fighter;burai-fighter-nes;Shooter;NES;1;;<NESART>burai-fighter-nes.png;<NES>Burai Fighter (USA).nes
+Days of Thunder;Days of Thunder;days-of-thunder-nes;Course;NES;1;;<NESART>days-of-thunder-nes.png;<NES>Days of Thunder (USA).nes
+Donkey Kong;Donkey Kong;donkey-kong-1-nes;Arcade;NES;1;;<NESART>donkey-kong-1-nes.png;<NES>Donkey Kong (World) (Rev A).nes
+Donkey Kong 3;Donkey Kong 3;donkey-kong-3-nes;Arcade;NES;1;;<NESART>donkey-kong-3-nes.png;<NES>Donkey Kong 3 (World).nes
+Donkey Kong Classics;Donkey Kong Classics;donkey-kong-classics-nes;Arcade;NES;1;;<NESART>donkey-kong-classics-nes.png;<NES>Donkey Kong Classics (USA, Europe).nes
+Gargoyle's Quest II;Gargoyle's Quest II;gargoyles-quest-2-nes;Action%Aventure;NES;1;;<NESART>gargoyles-quest-2-nes.png;<NES>Gargoyle's Quest II (USA).nes
+Gauntlet;Gauntlet;gauntlet-1-nes;Action;NES;2;;<NESART>gauntlet-1-nes.png;<NES>Gauntlet (USA).nes
+Gauntlet II;Gauntlet II;gauntlet-2-nes;Action;NES;2;;<NESART>gauntlet-2-nes.png;<NES>Gauntlet II (USA).nes
+Ghosts'n Goblins;Ghosts'n Goblins;ghosts-n-goblins-nes;Action;NES;1;;<NESART>ghosts-n-goblins-nes.png;<NES>Ghosts'n Goblins (USA).nes
+Kickle Cubicle;Kickle Cubicle;kickle-cubicle-nes;Action;NES;1;;<NESART>kickle-cubicle-nes.png;<NES>Kickle Cubicle (USA).nes
+Burai Fighter Deluxe;Burai Fighter Deluxe;burai-fighter-deluxe-bg;Shooter;Game Boy;1;;<GBART>burai-fighter-deluxe-gb.png;<GB>Burai Fighter Deluxe (USA, Europe).gb
+Castlevania - The Adventure;Castlevania Adventure;castlevania-the-adventure-gb;Action%Aventure;Game Boy;1;;<GBART>castlevania-the-adventure-gb.png;<GB>Castlevania - The Adventure (USA).gb
+Castlevania II - Belmont's Revenge;Castlevania II;castlevania-2-gb;Action%Aventure;Game Boy;1;;<GBART>castlevania-2-gb.png;<GB>Castlevania II - Belmont's Revenge (USA, Europe).gb
+Castlevania Legends;Castlevania Legends;castlevania-legends-gb;Action%Aventure;Game Boy;1;;<GBART>castlevania-legends-gb.png;<GB>Castlevania Legends (USA, Europe) (SGB Enhanced).gb
+Donkey Kong;Donkey Kong;donkey-kong-gb;Arcade;Game Boy;1;;<GBART>donkey-kong-gb.png;<GB>Donkey Kong (World) (Rev A) (SGB Enhanced).gb
+Gargoyle's Quest;Gargoyle's Quest;gargoyles-quest-1-gb;Action%Aventure;Game Boy;1;;<GBART>gargoyles-quest-1-gb.png;<GB>Gargoyle's Quest (USA, Europe).gb
+Kid Icarus;Kid Icarus;kid-icarus-gb;Action;Game Boy;1;;<GBART>kid-icarus-gb.png;<GB>Kid Icarus - Of Myths and Monsters (USA, Europe).gb
+Last Action Hero;Last Action Hero;last-action-hero-gb;Action;Game Boy;1;;<GBART>last-action-hero-gb.png;<GB>Last Action Hero (USA, Europe).gb
+Mario & Yoshi;Mario & Yoshi;mario-and-yoshi-gb;Puzzle;Game Boy;2;;<GBART>mario-and-yoshi-gb.png;<GB>Mario & Yoshi (Europe).gb
+Mega Man - Dr Wily's Revenge;Mega Man;mega-man-1-gb;Plate-forme;Game Boy;1;Mega Man;<GBART>mega-man-1-gb.png;<GB>Mega Man - Dr. Wily's Revenge (Europe).gb
+Mega Man II;Mega Man II;mega-man-2-gb;Plate-forme;Game Boy;1;Mega Man;<GBART>mega-man-2-gb.png;<GB>Mega Man II (Europe).gb
+Mega Man III;Mega Man III;mega-man-3-gb;Plate-forme;Game Boy;1;Mega Man;<GBART>mega-man-3-gb.png;<GB>Mega Man III (Europe).gb
+Mega Man IV;Mega Man IV;mega-man-4-gb;Plate-forme;Game Boy;1;Mega Man;<GBART>mega-man-4-gb.png;<GB>Mega Man IV (Europe).gb
+Mega Man V;Mega Man V;mega-man-5-gb;Plate-forme;Game Boy;1;Mega Man;<GBART>mega-man-5-gb.png;<GB>Mega Man V (Europe) (SGB Enhanced).gb
+Mystic Quest;Mystic Quest;mystic-quest-gb;Aventure%Role;Game Boy;1;;<GBART>mystic-quest-gb.png;<GB>Mystic Quest (France).gb
+Pac-Man;Pac-Man;pac-man-gb;Arcade;Game Boy;1;;<GBART>pac-man-gb.png;<GB>Pac-Man (Europe).gb
+Wario Land - Super Mario Land 3;Wario Land;wario-land-1-gb;Plate-forme;Game Boy;1;Mario;<GBART>wario-land-1-gb.png;<GB>Wario Land - Super Mario Land 3 (World).gb
+Wario Land II;Wario Land II;wario-land-2-gb;Plate-forme;Game Boy;1;Mario;<GBART>wario-land-2-gb,png;<GB>Wario Land II (USA, Europe) (SGB Enhanced).gb
+Alien 3;Alien 3;alien-3-md;Plate-forme%Action;Megadrive;1;;<MDART>alien-3-md.png;<MD>Alien 3 (USA, Europe) (Rev A).md
+Arcade Classics;Arcade Classics;arcade-classics-md;Arcade;Megadrive;1;;<MDART>arcade-classics-md.png;<MD>Arcade Classics (USA, Europe).md
+Ariel the Little Mermaid;The Little Mermaid;little-mermaid-md;Action;Megadrive;1;Disney;<MDART>little-mermaid-md.png;<MD>Ariel the Little Mermaid (USA, Europe).md
+Batman Forever;Batman Forever;batman-forever-md;Baston;Megadrive;2;;<MDART>batman-forever-md.png;<MD>Batman Forever (World).md
+California Games;California Games;california-games-md;Action;Megadrive;1;;<MDART>california-games-md.png;<MD>California Games (USA, Europe).md
+Castlevania - Bloodlines;Castlevania - Bloodlines;castlevania-bloodlines-md;Action%Plate-forme;Megadrive;1;;<MDART>castlevania-bloodlines-md.png;<MD>Castlevania - Bloodlines (USA).md
+Dashin' Desperadoes;Dashin' Desperadoes;dashin-desperadoes-md;Action%Plate-forme;Megadrive;2;;<MDART>dashin-desperadoes-md.png;<MD>Dashin' Desperadoes (USA).md
+Dragon - The Bruce Lee Story;Dragon;dragon-md;Baston;Megadrive;2;;<MDART>dragon-md.png;<MD>Dragon - The Bruce Lee Story (USA).md
+Mr Nutz;Mr Nutz;mr-nutz-md;Plate-forme;Megadrive;1;;<MDART>mr-nutz-md.png;<MD>Mr. Nutz (Europe).md
+Shadow of the Beast II;Shadow of the Beast II;shadow-of-the-beast-2-md;Action%Aventure;Megadrive;1;;<MDART>shadow-of-the-beast-2-md.png;<MD>Shadow of the Beast II (USA, Europe).md
+Sonic & Knuckles;Sonic & Knuckles;sonic-4-md;Plate-forme;Megadrive;1;Sonic;<MDART>sonic-4-md.png;<MD>Sonic & Knuckles (World).md
+Sonic 3 & Knuckles;Sonic 3 & Knuckles;sonic-3-1-md;Plate-forme;Megadrive;2;Sonic;<MDART>sonic-3-1-md.png;<MD>Sonic & Knuckles + Sonic The Hedgehog 3 (World).md
+Street Racer;Street Racer;street-racer-md;Course;Megadrive;2;;<MDART>street-racer-md.png;<MD>Street Racer (Europe).md
+Zero Tolerance;Zero Tolerance;zero-tolerance-md;Shooter;Megadrive;1;;<MDART>zero-tolerance-md.png;<MD>Zero Tolerance (USA, Europe).md
+Air Rescue;Air Rescue;air-rescue-ms;Action;Master System;1;;<MSART>air-rescue-ms.png;<MS>Air Rescue (Europe).sms
+Bubble Bobble;Bubble Bobble;bubble-bobble-1-ms;Arcade;Master System;2;;<MSART>bubble-bobble-1-ms.png;<MS>Bubble Bobble (Europe).sms
+Enduro Racer;Enduro Racer;enduro-racer-ms;Course;Master System;1;;<MSART>enduro-racer-ms.png;<MS>Enduro Racer (USA, Europe).sms
+Fantasy Zone;Fantasy Zone;fantasy-zone-1-ms;Shooter;Master System;1;;<MSART>fantasy-zone-1-ms.png;<MS>Fantasy Zone (World) (Rev 2).sms
+Fantasy Zone II - The Tears of Opa-Opa;Fantasy Zone II;fantasy-zone-2-ms;Shooter;Master System;1;;<MSART>fantasy-zone-2-ms.png;<MS>Fantasy Zone II - The Tears of Opa-Opa (USA, Europe).sms
+Fire & Forget II;Fire & Forget II;fire-and-forget-2-ms;Course;Master System;1;;<MSART>fire-and-forget-2-ms.png;<MS>Fire & Forget II (Europe).sms
+Gain Ground;Gain Ground;gain-ground-ms;Action%Strategie;Master System;1;;<MSART>gain-ground-ms.png;<MS>Gain Ground (Europe).sms
+Ghouls'n Ghosts;Ghouls'n Ghosts;ghouls-n-ghosts-ms;Action;Master System;1;;<MSART>ghouls-n-ghosts-ms.png;<MS>Ghouls'n Ghosts (USA, Europe).sms
+G-LOC Air Battle;G-LOC Air Battle;g-loc-air-battle-ms;Action%Shooter;Master System;1;;<MSART>g-loc-air-battle-ms.png;<MS>G-LOC Air Battle (Europe).sms
+Kenseiden;Kenseiden;kenseiden-ms;Action%Plate-forme;Master System;1;;<MSART>kenseiden-ms.png;<MS>Kenseiden (USA, Europe).sms
+Mortal Kombat;Mortal Kombat;mortal-kombat-1-ms;Baston;Master System;2;Mortal Kombat;<MSART>mortal-kombat-1-ms.png;<MS>Mortal Kombat (Europe).sms
+Mortal Kombat II;Mortal Kombat II;mortal-kombat-2-ms;Baston;Master System;2;Mortal Kombat;<MSART>mortal-kombat-2-ms.png;<MS>Mortal Kombat II (Europe).sms
+Prince Of Persia;Prince Of Persia;prince-of-persia-ms;Action%Plate-forme;Master System;1;;<MSART>prince-of-persia-ms.png;<MS>Prince of Persia (Europe).sms
+R-Type;R-Type;r-type-1-ms;Shooter;Master System;1;;<MSART>r-type-1-ms.png;<MS>R-Type (World).sms
+Shinobi;Shinobi;shinobi-1-ms;Action%Plate-forme;Master System;1;Shinobi;<MSART>shinobi-1-ms.png;<MS>Shinobi (USA, Europe).sms
+Spider-Man - Return of the Sinister Six;Spider-Man;spider-man-ms;Action%Plate-forme;Master System;1;;<MSART>spider-man-ms.png;<MS>Spider-Man - Return of the Sinister Six (Europe).sms
+Shinobi;Shinobi;shinobi-1-arc;Action%Plate-forme;Arcade;1;Shinobi;<ARCART>shinobi-1-arc.png;<ARCADE>shinobi
+Croc - Legend of the Gobbos;Croc;croc-1-ps;Action%Plate-forme;Playstation;1;;<PSART>croc-1-ps.png;PCSX_WIDTH=720 <PSX>Croc - Legend of the Gobbos.cue
+Disney's Hercules Action Game;Hercules;hercules-ps;Action%Plate-forme;Playstation;1;Disney;<PSART>hercules-ps.png;PCSX_WIDTH=720 <PSX>Disney's Hercules Action Game (v1.1).cue
+Battletoads;Battletoads;battletoads-arc;Baston;Arcade;2;;<ARCART>battletoads-arc.png;<ARCADE>btoads
+Deep Duck Trouble Starring Donald Duck;Deep Duck Trouble;deep-duck-trouble-ms;Plate-forme;Master System;1;Disney;<MSART>deep-duck-trouble-ms.png;<MS>Deep Duck Trouble Starring Donald Duck (Europe).sms
+Master of Darkness;Master of Darkness;master-of-darkness-ms;Plate-forme;Master System;1;;<MSART>master-of-darkness-ms.png;<MS>Master of Darkness (Europe).sms
+Rampage;Rampage;rampage-ms;Arcade;Master System;2;;<MSART>rampage-ms.png;<MS>Rampage (USA, Europe).sms
+Streets of Rage;Streets of Rage;streets-of-rage-1-ms;Baston;Master System;1;;<MSART>streets-of-rage-1-ms.png;<MS>Streets of Rage (Europe).sms
+Streets of Rage II;Streets of Rage II;streets-of-rage-2-ms;Baston;Master System;1;;<MSART>streets-of-rage-2-ms.png;<MS>Streets of Rage II (Europe).sms
+Ninja Gaiden;Ninja Gaiden;ninja-gaiden-gg;Action%Plate-forme;Game Gear;1;;<GGART>ninja-gaiden-gg.png;<GG>Ninja Gaiden (USA, Europe).gg
+The King of Fighters 95;King of Fighters 95;king-of-fighters-95-ng;Baston;Neo-Geo;2;;<NGART>king-of-fighters-95-ng.png;<NG>kof95
+The King of Fighters 98;King of Fighters 98;king-of-fighters-98-ng;Baston;Neo-Geo;2;;<NGART>king-of-fighters-98-ng.png;<NG>kof98
+The King of Fighters 2001;King of Fighters 2001;king-of-fighters-2001-ng;Baston;Neo-Geo;2;;<NGART>king-of-fighters-2001-ng.png;<NG>kof2001
+Super Dodge Ball;Super Dodge Ball;super-dodge-ball-ng;Sport;Neo-Geo;2;;<NGART>super-dodge-ball-ng.png;<NG>sdodgeb
+Neo Drift Challenge;Neo Drift Challenge;neo-drift-challenge-ng;Course;Neo-Geo;1;;<NGART>neo-drift-challenge-ng.png;<NG>neodrift
+Dragon's Lair;Dragon's Lair;dragons-lair-md;Arcade;Megadrive;1;;<MDART>dragons-lair-md.png;<MD>Dragon's Lair (1993)(ReadySoft)(NTSC)(US)[!][CDAC-068600 1].cue
+Sonic CD;Sonic CD;sonic-cd-md;Action%Plate-forme;Megadrive;1;;<NGART>sonic-cd-md.png;<MD>Sonic The Hedgehog CD (1993)(Sega)(NTSC)(Jp)(en)[!].cue
+Disney-Pixar's Toy Story Racer;Toy Story Racer;toy-story-racer-psx;Course;Playstation;2;Disney;<PSART>toy-story-racer-psx.png;PCSX_WIDTH=720 <PSX>Disney-Pixar's Toy Story Racer.cue
+Harry Potter and the Chamber of Secrets;Harry Potter 2;harry-potter-2-ps;Action;Playstation;1;;<PSART>harry-potter-2-ps.png;PCSX_WIDTH=720 <PSX>Harry Potter and the Chamber of Secrets (Europe).cue
+Puzzle Bobble 2;Puzzle Bobble 2;puzzle-bobble-2-ng;Puzzle;Neo-Geo;2;;<NGART>puzzle-bobble-2-ng.png;<NG>pbobbl2n
+Sonic 3D Blast;Sonic 3D Blast;sonic-3d-blast-md;Action;Megadrive;1;Sonic;<MDART>sonic-3d-blast-md.png;<MD>Sonic 3D Blast (USA) (Beta).md
+Sonic & Tails;Sonic & Tails;sonic-and-tails-1-gg;Plate-forme;Game Gear;1;Sonic;<GGART>sonic-and-tails-1-gg.png;<GG>Sonic & Tails (Japan) (En).gg
+Sonic & Tails 2;Sonic & Tails 2;sonic-and-tails-2-gg;Plate-forme;Game Gear;1;Sonic;<GGART>sonic-and-tails-2-gg.png;<GG>Sonic & Tails 2 (Japan).gg
+Sonic Chaos;Sonic Chaos;sonic-chaos-gg;Plate-forme;Game Gear;1;Sonic;<GGART>sonic-chaos-gg.png;<GG>Sonic Chaos (USA, Europe).gg
+Sonic Drift;Sonic Drift;sonic-drift-1-gg;Course;Game Gear;1;Sonic;<GGART>sonic-drift-1-gg.png;<GG>Sonic Drift (Japan).gg
+Sonic Drift 2;Sonic Drift 2;sonic-drift-2-gg;Course;Game Gear;1;Sonic;<GGART>sonic-drift-2-gg.png;<GG>Sonic Drift 2 (Japan, USA).gg
+Sonic Triple Trouble;Sonic Triple Trouble;sonic-triple-trouble-gg;Plate-forme;Game Gear;1;Sonic;<GGART>sonic-triple-trouble-gg.png;<GG>Sonic The Hedgehog - Triple Trouble (USA, Europe).gg
+After Burner II;After Burner II;after-burner-2-pce;Action%Shooter;PC Engine;1;;<PCEART>after-burner-2-pce.png;<ENGINE>After Burner II (Japan).pce
+Batman;Batman;batman-pce;Action;PC Engine;1;;<PCEART>batman-pce.png;<ENGINE>Batman (Japan).pce
+Bomberman 93;Bomberman 93;bomberman-93-pce;Action;PC Engine;2;;<PCEART>bomberman-93-pce.png;<ENGINE>Bomberman '93 (USA).pce
+Bonk III;Bonk III;bonk-3-pce;Action;PC Engine;1;;<PCEART>bonk-3-pce.png;<ENGINE>Bonk III - Bonk's Big Adventure (USA).pce
+Bonk's Adventure;Bonk;bonk-2-pce;Action;PC Engine;1;;<PCEART>bonk-2-pce.png;<ENGINE>Bonk's Adventure (USA).pce
+Bonk's Revenge;Bonk's Revenge;bonk-1-pce;Action;PC Engine;1;;<PCEART>bonk-1-pce.png;<ENGINE>Bonk's Revenge (USA).pce
+R-Type;R-Type;r-type-1-pce;Action%Shooter;PC Engine;1;;<PCEART>r-type-1-pce.png;<ENGINE>R-Type (USA).pce
+Chase HQ;Chase HQ;chase-hq-pce;Course;PC Engine;1;;<PCEART>chase-hq-pce.png;<ENGINE>Taito Chase H.Q. (USA).pce
+Aerial Assault;Aerial Assault;aerial-assault-ms;Shooter;Master System;1;;<MSART>aerial-assault-ms.png;<MS>Aerial Assault (USA).sms
+Aladdin;Aladdin;aladdin-ms;Plate-forme;Master System;1;;<MSART>aladdin-ms.png;<MS>Aladdin (Europe).sms
+Quest for the shaven Yak Starring Ren Hoek and Stimpy;Ren & Stimpy;ren-stimpy-ms;Plate-forme;Master System;1;;<MSART>ren-stimpy-ms.png;<MS>Quest for the Shaven Yak Starring Ren Hoek & Stimpy (Brazil).sms
+Robocop 3;Robocop 3;robocop-3-ms;Plate-forme%Action;Master System;1;;<MSART>robocop-3-ms.png;<MS>RoboCop 3 (Europe).sms
+Robocop vs Terminator;Robocop vs Terminator;robocop-vs-terminator-ms;Plate-forme%Action;Master System;1;;<MSART>robocop-vs-terminator-ms.png;<MS>RoboCop versus The Terminator (Europe).sms
+Sonic Chaos;Sonic Chaos;sonic-chaos-ms;Plate-forme;Master System;1;;<MSART>sonic-chaos-ms.png;<MS>Sonic Chaos (Europe).sms
+Zool;Zool;zool-ms;Plate-forme;Master System;1;;<MSART>zool-ms.png;<MS>Zool - Ninja of the 'Nth' Dimension (Europe).sms
+Batman;Batman;batman-gb;Plate-forme;Game Boy;1;;<GBART>batman-gb.png;<GB>Batman - The Video Game (World).gb
+Tomb Raider;Tomb Raider;tomb-raider-1-ps;Plate-forme;Playstation;1;;<PSART>tomb-raider-1-ps.png;PCSX_WIDTH=720 <PSX>TombRaider.cue
+Herc's Adventures;Herc's Adventures;herc-s-adventures-ps;Action;Playstation;2;;<PSART>herc-s-adventures-ps.png;PCSX_WIDTH=720 <PSX>HercsAdventures.cue
+Bloody Roar II;Bloody Roar II;bloody-roar-2-ps;Baston;Playstation;2;;<PSART>bloody-roar-2-ps.png;PCSX_WIDTH=600 <PSX>BloodyRoarII.cue
+Bloody Roar;Bloody Roar;bloody-roar-1-ps;Baston;Playstation;2;;<PSART>bloody-roar-1-ps.png;PCSX_WIDTH=600 <PSX>BloodyRoar.cue
+The Legend of Zelda, Link's awakening;Link's Awakening;zelda-gbc;Aventure%Role;Game Boy Color;1;Zelda;;<GBC>Legend of Zelda, The - Link's Awakening DX (France) (Rev A) (SGB Enhanced).gbc
+Pokemon Or;Pokemon Or;pokemon-or-gbc;Aventure;Game Boy Color;1;;;<GBC>Pokemon - Version Or (France) (SGB Enhanced).gbc
+Super Mario Bros Deluxe;Super Mario bros;super-mario-bros-deluxe-gbc;Plate-forme;Game Boy Color;1;Mario;;<GBC>Super Mario Bros. Deluxe (USA, Europe) (Rev B).gbc
+Star Wars - Masters of Teras Kasi;Masters of Teras Kasi;masters-of-teras-kasi-ps;Baston;Playstation;2;;;PCSX_WIDTH=720 <PSX>MastersOfTerasKasi.cue

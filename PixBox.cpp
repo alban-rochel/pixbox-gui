@@ -84,8 +84,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_a:
-          case SDLK_f:
+          case SDLK_a: // Player 1
+          case SDLK_f: // Player 2
+          case SDLK_F4:  // Player 3
             {
               string device = this->_content->nextDevice();
               update = true;
@@ -95,8 +96,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_w:
-          case SDLK_t:
+          case SDLK_w: // Player 1
+          case SDLK_t: // Player 2
+          case SDLK_F8:  // Player 3
             {
               string device = this->_content->previousDevice();
               update = true;
@@ -106,8 +108,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_s:
-          case SDLK_g:
+          case SDLK_s: // Player 1
+          case SDLK_g: // Player 2
+            case SDLK_F5:  // Player 3
             {
               string type = this->_content->nextGameType();
               update = true;
@@ -117,8 +120,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_e:
-          case SDLK_y:
+          case SDLK_e: // Player 1
+          case SDLK_y: // Player 2
+            case SDLK_F9:  // Player 3
             {
               string type = this->_content->previousGameType();
               update = true;
@@ -127,8 +131,9 @@ void PixBox::mainLoop()
               _graphics->setType(type);
             }
 
-          case SDLK_d:
-          case SDLK_h:
+          case SDLK_d: // Player 1
+          case SDLK_h: // Player 2
+            case SDLK_F6:  // Player 3
             {
               string multiplayer = this->_content->nextMultiplayer();
               update = true;
@@ -138,8 +143,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_z:
-          case SDLK_v:
+          case SDLK_z: // Player 1
+          case SDLK_v: // Player 2
+            case SDLK_F10:  // Player 3
             {
               string multiplayer = this->_content->previousMultiplayer();
               update = true;
@@ -149,8 +155,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_q:
-          case SDLK_b:
+          case SDLK_q: // Player 1
+          case SDLK_b: // Player 2
+            case SDLK_F7:  // Player 3
             {
               string family = this->_content->nextGameFamily();
               update = true;
@@ -160,8 +167,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_x:
-          case SDLK_r:
+          case SDLK_x: // Player 1
+          case SDLK_r: // Player 2
+            case SDLK_F11:  // Player 3
             {
               string family = this->_content->previousGameFamily();
               update = true;
@@ -171,8 +179,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_UP:
-          case SDLK_i:
+          case SDLK_UP: // Player 1
+          case SDLK_i: // Player 2
+            case SDLK_u:  // Player 3
             {
               if(frameNumber() - lastProcessedEventFrame > EVENT_THRESHOLD_IN_FRAMES)
               {
@@ -184,8 +193,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_DOWN:
-          case SDLK_k:
+          case SDLK_DOWN: // Player 1
+          case SDLK_k: // Player 2
+            case SDLK_o:  // Player 3
             {
               if(frameNumber() - lastProcessedEventFrame > EVENT_THRESHOLD_IN_FRAMES)
               {
@@ -197,8 +207,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_LEFT:
-          case SDLK_j:
+          case SDLK_LEFT: // Player 1
+          case SDLK_j: // Player 2
+            case SDLK_c:  // Player 3
             {
               if(frameNumber() - lastProcessedEventFrame > EVENT_THRESHOLD_IN_FRAMES)
               {
@@ -210,8 +221,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_RIGHT:
-          case SDLK_l:
+          case SDLK_RIGHT: // Player 1
+          case SDLK_l: // Player 2
+            case SDLK_n:  // Player 3
             {
               if(frameNumber() - lastProcessedEventFrame > EVENT_THRESHOLD_IN_FRAMES)
               {
@@ -223,8 +235,9 @@ void PixBox::mainLoop()
             }
             break;
 
-          case SDLK_1:
-          case SDLK_2:
+          case SDLK_1: // Player 1
+          case SDLK_2: // Player 2
+            case SDLK_3: // Player 3
             {
               update=true;
               _graphics->startCurrentGame();

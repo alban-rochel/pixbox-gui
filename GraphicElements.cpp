@@ -390,14 +390,11 @@ void GraphicElements::Private::reset()
 
 void GraphicElements::Private::init()
 {
-  _elements._background.setImage(RESOURCE_PATH("pixbox-interface3.png").c_str(), 0, 0, false, _screen);//.createSurface(0, 0, 1280, 720);
+  _elements._background.setImage(RESOURCE_PATH(BACKGROUND_IMAGE).c_str(), 0, 0, false, _screen);//.createSurface(0, 0, 1280, 720);
 
   _elements._fonts._titlesFont = TTF_OpenFont(RESOURCE_PATH("PressStart2P.ttf").c_str(), 16);
   _elements._fonts._entriesFont = TTF_OpenFont(RESOURCE_PATH("PressStart2P.ttf").c_str(), 16);
 
-//  _elements._gamesElements._title.surface = TTF_RenderUTF8_Solid(_elements._fonts._titlesFont, "JEUX", _elements._fonts._titleColor);
-//  _elements._gamesElements._title.setRect(0, 0, 200, 50);
-//  _elements._gamesElements._title.setText("JEUX", _elements._fonts._titlesFont, _elements._fonts._titleColor, true, 50, 30);
   _elements._gamesElements._gameTitles.clear();
   for(unsigned int ii = 0; ii < numGamesDisplayed(); ++ii)
   {
@@ -406,80 +403,61 @@ void GraphicElements::Private::init()
     _elements._gamesElements._gameTitles.push_back(surf);
   }
 
-//  _elements._deviceElements._deviceTitle.surface = TTF_RenderUTF8_Solid(_elements._fonts._titlesFont, "Machine", _elements._fonts._titleColor);
-//  _elements._deviceElements._deviceTitle.setRect(200, 0, 200, 50);
-  _elements._deviceElements._deviceTitle.setText("Machine", _elements._fonts._titlesFont, _elements._fonts._titleColor, false, _parameters._filterXOffset, _parameters._filterYOffset);
+  _elements._deviceElements._deviceTitle.setText(TEXT_MACHINE, _elements._fonts._titlesFont, _elements._fonts._titleColor, false, _parameters._filterXOffset, _parameters._filterYOffset);
   _elements._deviceElements._deviceTitle.xOffset = &_elements._deviceElements._XOffset;
   _elements._deviceElements._deviceTitle.yOffset = &_elements._deviceElements._YOffset;
-//  _elements._deviceElements._deviceName.surface = TTF_RenderUTF8_Solid(_elements._fonts._entriesFont, "Tout", _elements._fonts._entriesColor);
-//  _elements._deviceElements._deviceName.setRect(200, 50, 200, 50);
-  _elements._deviceElements._deviceName.setText("Tout", _elements._fonts._entriesFont, _elements._fonts._entriesColor2, false, _parameters._filterXOffset + 150, _parameters._filterYOffset);
+
+  _elements._deviceElements._deviceName.setText(TEXT_ALL, _elements._fonts._entriesFont, _elements._fonts._entriesColor2, false, _parameters._filterXOffset + 150, _parameters._filterYOffset);
   _elements._deviceElements._deviceName.xOffset = &_elements._deviceElements._XOffset;
   _elements._deviceElements._deviceName.yOffset = &_elements._deviceElements._YOffset;
-//  _elements._deviceElements._deviceBackground.createSurface(200, 0, 200, 50);
-//  _elements._deviceElements._deviceBackground.setImage("C:/temp/plop.png", 500, 640, true, _screen);//createSurface(200, 0, 200, 50);
+
   _elements._deviceElements._deviceBackground.xOffset = &_elements._deviceElements._XOffset;
   _elements._deviceElements._deviceBackground.yOffset = &_elements._deviceElements._YOffset;
-//  _elements._deviceElements._deviceBlinkBackground.createSurface(200, 0, 200, 50);
 
-//  _elements._typeElements._typeTitle.surface = TTF_RenderUTF8_Solid(_elements._fonts._titlesFont, "Type", _elements._fonts._titleColor);
-//  _elements._typeElements._typeTitle.setRect(300, 0, 200, 50);
-  _elements._typeElements._typeTitle.setText("Type", _elements._fonts._titlesFont, _elements._fonts._titleColor, false, _parameters._filterXOffset, _parameters._filterYOffset + _parameters._filterYPadding);
+  _elements._typeElements._typeTitle.setText(TEXT_TYPE, _elements._fonts._titlesFont, _elements._fonts._titleColor, false, _parameters._filterXOffset, _parameters._filterYOffset + _parameters._filterYPadding);
   _elements._typeElements._typeTitle.xOffset = &_elements._typeElements._XOffset;
   _elements._typeElements._typeTitle.yOffset = &_elements._typeElements._YOffset;
-//  _elements._typeElements._typeName.surface = TTF_RenderUTF8_Solid(_elements._fonts._entriesFont, "Tout", _elements._fonts._entriesColor);
-//  _elements._typeElements._typeName.setRect(300, 50, 200, 50);
-  _elements._typeElements._typeName.setText("Tout", _elements._fonts._entriesFont, _elements._fonts._entriesColor2, false, _parameters._filterXOffset + 150, _parameters._filterYOffset + _parameters._filterYPadding);
+
+  _elements._typeElements._typeName.setText(TEXT_ALL, _elements._fonts._entriesFont, _elements._fonts._entriesColor2, false, _parameters._filterXOffset + 150, _parameters._filterYOffset + _parameters._filterYPadding);
   _elements._typeElements._typeName.xOffset = &_elements._typeElements._XOffset;
   _elements._typeElements._typeName.yOffset = &_elements._typeElements._YOffset;
-//  _elements._typeElements._typeBackground.setImage("C:/temp/plop.png", 700, 640, true, _screen);//createSurface(200, 0, 200, 50);
+
   _elements._typeElements._typeBackground.xOffset = &_elements._typeElements._XOffset;
   _elements._typeElements._typeBackground.yOffset = &_elements._typeElements._YOffset;
-//  _elements._typeElements._typeBlinkBackground.createSurface(200, 0, 200, 50);
 
-//  _elements._multiElements._multiTitle.surface = TTF_RenderUTF8_Solid(_elements._fonts._titlesFont, "Multi ?", _elements._fonts._titleColor);
-//  _elements._multiElements._multiTitle.setRect(400, 0, 200, 50);
-  _elements._multiElements._multiTitle.setText("Multi ?", _elements._fonts._titlesFont, _elements._fonts._titleColor, false, _parameters._filterXOffset, _parameters._filterYOffset + 2 * _parameters._filterYPadding);
+  _elements._multiElements._multiTitle.setText(TEXT_PLAYERS, _elements._fonts._titlesFont, _elements._fonts._titleColor, false, _parameters._filterXOffset, _parameters._filterYOffset + 2 * _parameters._filterYPadding);
   _elements._multiElements._multiTitle.xOffset = &_elements._multiElements._XOffset;
   _elements._multiElements._multiTitle.yOffset = &_elements._multiElements._YOffset;
-//  _elements._multiElements._multiName.surface = TTF_RenderUTF8_Solid(_elements._fonts._entriesFont, "Tout", _elements._fonts._entriesColor);
-//  _elements._multiElements._multiName.setRect(400, 50, 200, 50);
-  _elements._multiElements._multiName.setText("1P/2P", _elements._fonts._entriesFont, _elements._fonts._entriesColor2, false, _parameters._filterXOffset + 150, _parameters._filterYOffset + 2 * _parameters._filterYPadding);
+
+  _elements._multiElements._multiName.setText("1P/2P/3P", _elements._fonts._entriesFont, _elements._fonts._entriesColor2, false, _parameters._filterXOffset + 150, _parameters._filterYOffset + 2 * _parameters._filterYPadding);
   _elements._multiElements._multiName.xOffset = &_elements._multiElements._XOffset;
   _elements._multiElements._multiName.yOffset = &_elements._multiElements._YOffset;
-//  _elements._multiElements._multiBackground.setImage("C:/temp/plop.png", 900, 640, true, _screen);//createSurface(200, 0, 200, 50);
+
   _elements._multiElements._multiBackground.xOffset = &_elements._multiElements._XOffset;
   _elements._multiElements._multiBackground.yOffset = &_elements._multiElements._YOffset;
-//  _elements._multiElements._multiBlinkBackground.createSurface(200, 0, 200, 50);
 
-//  _elements._familyElements._familyTitle.surface = TTF_RenderUTF8_Solid(_elements._fonts._titlesFont, "Famille", _elements._fonts._titleColor);
-//  _elements._familyElements._familyTitle.setRect(500, 0, 200, 50);
-  _elements._familyElements._familyTitle.setText("Famille", _elements._fonts._titlesFont, _elements._fonts._titleColor, false, _parameters._filterXOffset, _parameters._filterYOffset + 3 * _parameters._filterYPadding);
+
+  _elements._familyElements._familyTitle.setText(TEXT_GAME_FAMILY, _elements._fonts._titlesFont, _elements._fonts._titleColor, false, _parameters._filterXOffset, _parameters._filterYOffset + 3 * _parameters._filterYPadding);
   _elements._familyElements._familyTitle.xOffset = &_elements._familyElements._XOffset;
   _elements._familyElements._familyTitle.yOffset = &_elements._familyElements._YOffset;
-//  _elements._familyElements._familyName.surface = TTF_RenderUTF8_Solid(_elements._fonts._entriesFont, "Tout", _elements._fonts._entriesColor);
-//  _elements._familyElements._familyName.setRect(500, 50, 200, 50);
-  _elements._familyElements._familyName.setText("Tout", _elements._fonts._entriesFont, _elements._fonts._entriesColor2, false, _parameters._filterXOffset + 150, _parameters._filterYOffset + 3 * _parameters._filterYPadding);
+
+  _elements._familyElements._familyName.setText(TEXT_ALL, _elements._fonts._entriesFont, _elements._fonts._entriesColor2, false, _parameters._filterXOffset + 150, _parameters._filterYOffset + 3 * _parameters._filterYPadding);
   _elements._familyElements._familyName.xOffset = &_elements._familyElements._XOffset;
   _elements._familyElements._familyName.yOffset = &_elements._familyElements._YOffset;
-//  _elements._familyElements._familyBackground.setImage("C:/temp/plop.png", 1100, 640, true, _screen);//createSurface(200, 0, 200, 50);
+
   _elements._familyElements._familyBackground.xOffset = &_elements._familyElements._XOffset;
   _elements._familyElements._familyBackground.yOffset = &_elements._familyElements._YOffset;
 //  _elements._familyElements._familyBlinkBackground.createSurface(200, 0, 200, 50);
 
-  _elements._mainElements._gameTitle.setText("Jeu", _elements._fonts._titlesFont, _elements._fonts._titleColor, true, 800, 50);
-  _elements._mainElements._deviceTitle.setText("Machine", _elements._fonts._titlesFont, _elements._fonts._titleColor, false, 400, 150);
-  _elements._mainElements._typeTitle.setText("Type", _elements._fonts._titlesFont, _elements._fonts._titleColor, false, 400, 200);
-  _elements._mainElements._multiTitle.setText("Multijoueur ?", _elements._fonts._titlesFont, _elements._fonts._titleColor, false, 400, 250);
+  _elements._mainElements._gameTitle.setText(TEXT_GAME, _elements._fonts._titlesFont, _elements._fonts._titleColor, true, 800, 50);
+  _elements._mainElements._deviceTitle.setText(TEXT_MACHINE, _elements._fonts._titlesFont, _elements._fonts._titleColor, false, 400, 150);
+  _elements._mainElements._typeTitle.setText(TEXT_TYPE, _elements._fonts._titlesFont, _elements._fonts._titleColor, false, 400, 200);
+  _elements._mainElements._multiTitle.setText(TEXT_PLAYERS, _elements._fonts._titlesFont, _elements._fonts._titleColor, false, 400, 250);
 
   _elements._character.characterSheet.surface;
-//  optimisedLoadPng("C:/temp/items-pixbox.png", &_elements._character.characterSheet.surface);
-//  SDL_SetColorKey(_elements._character.characterSheet.surface, SDL_SRCCOLORKEY | SDL_RLEACCEL , SDL_MapRGB(_screen->format, 255, 0, 255));
+
   _elements._character.characterSheet.setImage(RESOURCE_PATH("items-pixbox.png").c_str(), 0, 500, false, _screen);
-//  _elements._character.characterSheet.rect.x = 600;
-//  _elements._character.characterSheet.rect.y = 0;
-//  _elements._character.characterSheet.rect.w = 96;
-//  _elements._character.characterSheet.rect.h = 48;
+
   _elements._character.sourceRect.x = 0;
   _elements._character.sourceRect.y = (rand() % 10) * 48 + 1;
   _elements._character.sourceRect.w = 96;
@@ -493,8 +471,8 @@ void GraphicElements::Private::init()
   _elements._cursorElements._XOffset = 0;
   _elements._cursorElements._YOffset = 0;
 
-  _bling = Mix_LoadWAV( RESOURCE_PATH("smb_coin.wav").c_str());
-  _bump = Mix_LoadWAV( RESOURCE_PATH("smb_bump.wav").c_str());
+  _bling = Mix_LoadWAV( RESOURCE_PATH(SOUND_ONE).c_str());
+  _bump = Mix_LoadWAV( RESOURCE_PATH(SOUND_TWO).c_str());
 
 }
 
@@ -610,7 +588,7 @@ bool GraphicElements::init()
   SDL_RESIZABLE	Create a resizable window. When the window is resized by the user a SDL_VIDEORESIZE event is generated and SDL_SetVideoMode can be called again with the new size.
   SDL_NOFRAME	If possible, SDL_NOFRAME causes SDL to create a window with no title bar or frame decoration. Fullscreen modes automatically have this flag set.
   */
-  d->_screen = SDL_SetVideoMode(1280, 720, 16, SDL_SWSURFACE /*SDL_HWSURFACE | SDL_DOUBLEBUF*/);
+  d->_screen = SDL_SetVideoMode(PIXBOX_WIDTH, PIXBOX_HEIGHT, 16, SDL_SWSURFACE /*SDL_HWSURFACE | SDL_DOUBLEBUF*/);
   if ( d->_screen == NULL )
   {
     if(!PixBox::instance()->isQuiet())
@@ -808,7 +786,7 @@ void GraphicElements::setVisibleGames(const std::vector<Game*> &games, unsigned 
     if(type.empty())
       type = "-";
     d->_elements._mainElements._typeName.setText(type.c_str(), d->_elements._fonts._entriesFont, d->_elements._fonts._entriesColor2, false, 500, 200);
-    d->_elements._mainElements._multiName.setText(game->isMultiplayer() ? "1P/2P" : "1P", d->_elements._fonts._entriesFont, d->_elements._fonts._entriesColor2, false, 650, 250);
+    d->_elements._mainElements._multiName.setText(game->getMaxPlayersString().c_str(), d->_elements._fonts._entriesFont, d->_elements._fonts._entriesColor2, false, 650, 250);
     if(!game->getPicturePath().empty())
     {
 #ifdef BEFORE_MODIF
@@ -854,10 +832,10 @@ void GraphicElements::startCurrentGame()
     system((d->_currentCommand + " 2>&1 > /dev/null").c_str());
   }
   SDL_InitSubSystem(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER);
-  d->_screen = SDL_SetVideoMode(1280, 720, 16, SDL_SWSURFACE /*SDL_HWSURFACE | SDL_DOUBLEBUF*/);
+  d->_screen = SDL_SetVideoMode(PIXBOX_WIDTH, PIXBOX_HEIGHT, 16, SDL_SWSURFACE /*SDL_HWSURFACE | SDL_DOUBLEBUF*/);
   Mix_OpenAudio( MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, 1, 2048 );
-  d->_bling = Mix_LoadWAV( RESOURCE_PATH("smb_coin.wav").c_str());
-  d->_bump = Mix_LoadWAV( RESOURCE_PATH("smb_bump.wav").c_str());
+  d->_bling = Mix_LoadWAV( RESOURCE_PATH(SOUND_ONE).c_str());
+  d->_bump = Mix_LoadWAV( RESOURCE_PATH(SOUND_TWO).c_str());
 }
 
 void GraphicElements::showKeyLayout()
@@ -921,7 +899,7 @@ void GraphicElements::flip()
 void GraphicElements::setDevice(const string& device)
 {
   hideKeyLayout();
-  string actualDevice = device.empty() ? "Tout" : device;
+  string actualDevice = device.empty() ? TEXT_ALL : device;
   d->_elements._deviceElements._deviceName.setText(actualDevice.c_str(), d->_elements._fonts._entriesFont,
                                                    d->_elements._fonts._entriesColor2,
                                                    false,
@@ -936,7 +914,7 @@ void GraphicElements::setDevice(const string& device)
 void GraphicElements::setType(const string& type)
 {
   hideKeyLayout();
-  string actualType = type.empty() ? "Tout" : type;
+  string actualType = type.empty() ? TEXT_ALL : type;
   d->_elements._typeElements._typeName.setText(actualType.c_str(), d->_elements._fonts._entriesFont,
                                                    d->_elements._fonts._entriesColor2,
                                                    false,
@@ -950,7 +928,7 @@ void GraphicElements::setType(const string& type)
 void GraphicElements::setMulti(const string& multi)
 {
   hideKeyLayout();
-  string actualMulti = multi.empty() ? "1P/2P" : multi;
+  string actualMulti = multi.empty() ? "1P/2P/3P" : multi;
   d->_elements._multiElements._multiName.setText(actualMulti.c_str(), d->_elements._fonts._entriesFont,
                                                    d->_elements._fonts._entriesColor2,
                                                    false,
@@ -964,7 +942,7 @@ void GraphicElements::setMulti(const string& multi)
 void GraphicElements::setFamily(const string& family)
 {
   hideKeyLayout();
-  string actualFamily = family.empty() ? "Tout" : family;
+  string actualFamily = family.empty() ? TEXT_ALL : family;
   d->_elements._familyElements._familyName.setText(actualFamily.c_str(), d->_elements._fonts._entriesFont,
                                                    d->_elements._fonts._entriesColor2,
                                                    false,

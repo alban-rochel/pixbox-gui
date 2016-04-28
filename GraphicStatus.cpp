@@ -1,10 +1,9 @@
 #include "GraphicStatus.h"
 
-#define NUM_GAMES 20
-
 #include "Content.h"
 #include <vector>
 #include <iostream>
+#include "defines.h"
 
 using namespace std;
 

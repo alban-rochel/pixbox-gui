@@ -4,13 +4,8 @@
 #include <list>
 #include <vector>
 #include <string>
+#include "defines.h"
 
-#define MAX_SHORTNAME_LENGTH 20
-#ifdef WIN32
-#define RESOURCE_PATH(resource) (string("C:\\temp\\pixbox-resources\\")+resource)
-#else
-#define RESOURCE_PATH(resource) (string("/media/BBB/pixbox/resources/")+resource)
-#endif
 
 extern bool IsQuiet;
 
@@ -40,8 +35,9 @@ class Game
     void setDevice(const std::string& device);
     const std::string& getDevice() const;
 
-    void setIsMultiplayer(bool isMultiplayer=false);
-    bool isMultiplayer() const;
+    void setNumPlayers(unsigned int numPlayers);
+    unsigned int getMaxPlayers() const;
+    std::string getMaxPlayersString() const;
 
     void addGameFamily(const std::string& family);
     const std::list<std::string>& getGameFamilies() const;
@@ -56,7 +52,7 @@ class Game
 
     bool matches(const std::string& type = std::string(),
                  const std::string& device = std::string(),
-                 bool isMultiplayer = false,
+                 unsigned int numPlayers = 1,
                  const std::string& family = std::string()) const;
 
   private:

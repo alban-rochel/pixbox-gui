@@ -1,6 +1,7 @@
 #ifndef GRAPHICELEMENTS_H
 #define GRAPHICELEMENTS_H
 
+#include "defines.h"
 #include "SDL.h"   /* All SDL App's need this */
 #include "SDL_ttf.h"
 #include <list>
@@ -40,8 +41,8 @@ class GraphicElements
     bool static optimisedLoadPng(const char *path, SDL_Surface **target);
 
   protected:
-    int screenWidth() const {return 1280;}
-    int screenHeight() const {return 720;}
+    int screenWidth() const {return PIXBOX_WIDTH;}
+    int screenHeight() const {return PIXBOX_HEIGHT;}
     int screenBpp() const {return  16;}
 
   private:

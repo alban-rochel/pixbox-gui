@@ -20,7 +20,7 @@ class Game::Private
     string _sortKey;
     list<string> _gameTypes;
     string _device;
-    bool _multiplayer;
+    unsigned int _maxPlayers;
     list<string> _gameFamily;
     string _commandLine;
     string _picturePath;
@@ -33,7 +33,7 @@ Game::Private::Private():
   _sortKey(),
   _gameTypes(),
   _device(),
-  _multiplayer(false),
+  _maxPlayers(1),
   _gameFamily(),
   _commandLine(),
   _picturePath(),
@@ -46,7 +46,7 @@ Game::Private::Private(const Game::Private &other):
   _sortKey(other._sortKey),
   _gameTypes(other._gameTypes),
   _device(other._device),
-  _multiplayer(other._multiplayer),
+  _maxPlayers(other._maxPlayers),
   _gameFamily(other._gameFamily),
   _commandLine(other._commandLine),
   _picturePath(other._picturePath),
@@ -63,7 +63,7 @@ Game::Private& Game::Private::operator =(const Game::Private& other)
   _sortKey = other._sortKey;
   _gameTypes = other._gameTypes;
   _device = other._device;
-  _multiplayer = other._multiplayer;
+  _maxPlayers = other._maxPlayers;
   _gameFamily = other._gameFamily;
   _commandLine = other._commandLine;
   _picturePath = other._picturePath;
@@ -173,14 +173,28 @@ const std::string& Game::getDevice() const
   return d->_device;
 }
 
-void Game::setIsMultiplayer(bool isMultiplayer)
+void Game::setNumPlayers(unsigned int numPlayers)
 {
-  d->_multiplayer = isMultiplayer;
+  d->_maxPlayers = numPlayers;
 }
 
-bool Game::isMultiplayer() const
+unsigned int Game::getMaxPlayers() const
 {
-  return d->_multiplayer;
+  return d->_maxPlayers;
+}
+
+std::string Game::getMaxPlayersString() const
+{
+  switch(d->_maxPlayers)
+  {
+  case 2:
+      return "1P/2P";
+  case 3:
+      return "1P/2P/3P";
+  default:
+      break;
+  }
+  return "1P";
 }
 
 void Game::addGameFamily(const std::string& family)
@@ -232,7 +246,7 @@ bool Game::operator <(const Game& other) const
 
 bool Game::matches(const string& type,
                    const string& device,
-                   bool isMultiplayer,
+                   unsigned int numPlayers,
                    const string& family) const
 {
 //  cout << "matches " << d->_name.c_str() << endl;
@@ -252,7 +266,7 @@ bool Game::matches(const string& type,
   if(!device.empty() && d->_device != device)
     return false;
 
-  if(isMultiplayer && !d->_multiplayer)
+  if(d->_maxPlayers < numPlayers)
     return false;
 
   if(!family.empty())
@@ -292,8 +306,8 @@ class Content::Private
     vector<string> _devices;
     int _currentDevice;
     string _currentDeviceString;
-    bool _currentMultiplayer;
-    string _currentMultiplayerString;
+    unsigned int _currentMinPlayers;
+    string _currentMinPlayersString;
     vector<string> _families;
     int _currentFamily;
     string _currentFamilyString;
@@ -335,8 +349,8 @@ void Content::Private::reset()
   _currentDevice = -1;
   _currentDeviceString.clear();
 
-  _currentMultiplayer = false;
-  _currentMultiplayerString = "1P/2P";
+  _currentMinPlayers = 1;
+  _currentMinPlayersString = "1P/2P/3P";
 
   _families.clear();
   _currentFamily = -1;
@@ -353,7 +367,7 @@ void Content::Private::regenerateSelection()
   {
     if((*iter)->matches(_currentTypeString,
                         _currentDeviceString,
-                        _currentMultiplayer,
+                        _currentMinPlayers,
                         _currentFamilyString))
     {
       _selectedGames.push_back(*iter);
@@ -597,20 +611,27 @@ const string& Content::nextDevice()
 
 const string& Content::nextMultiplayer()
 {
-  d->_currentMultiplayer = !d->_currentMultiplayer;
+    switch(d->_currentMinPlayers)
+    {
+    case 2:
+        d->_currentMinPlayers = 3;
+        d->_currentMinPlayersString = "3P";
+        break;
 
-  if(d->_currentMultiplayer)
-  {
-    d->_currentMultiplayerString = "2P";
-  }
-  else
-  {
-    d->_currentMultiplayerString = "1P/2P";
-  }
+    case 3:
+        d->_currentMinPlayers = 1;
+        d->_currentMinPlayersString = "1P/2P/3P";
+        break;
+
+    default:
+        d->_currentMinPlayers = 2;
+        d->_currentMinPlayersString = "2P/3P";
+        break;
+    }
 
   d->regenerateSelection();
 
-  return d->_currentMultiplayerString;
+  return d->_currentMinPlayersString;
 }
 
 const string& Content::nextGameFamily()
@@ -727,22 +748,8 @@ const vector<Game*>& Content::currentSelection() const
 
 bool Content::init()
 {
-#define ADDGAME(title, shortName, sortKey, type, device, isMultiplayer, family, artwork, command)\
-{\
-  Game game;\
-  game.setName(title);\
-  game.setShortName(shortName);\
-  game.setSortKey(sortKey);\
-  game.addGameType(type);\
-  game.setDevice(device);\
-  game.setIsMultiplayer(isMultiplayer);\
-  game.addGameFamily(family);\
-  game.setPicturePath(artwork);\
-  game.setCommandLine(command);\
-  addGame(game);\
-}
 
-#define ADDGAME2(title, shortName, sortKey, types, device, isMultiplayer, family, artwork, command)\
+#define ADDGAME2(title, shortName, sortKey, types, device, numPlayers, family, artwork, command)\
 {\
   Game game;\
   game.setName(title);\
@@ -750,7 +757,7 @@ bool Content::init()
   game.setSortKey(sortKey);\
   for(list<string>::const_iterator iter = types.begin(); iter != types.end(); ++iter) game.addGameType(*iter);\
   game.setDevice(device);\
-  game.setIsMultiplayer(isMultiplayer);\
+  game.setNumPlayers(numPlayers);\
   game.addGameFamily(family);\
   game.setPicturePath(artwork);\
   game.setCommandLine(command);\
@@ -759,43 +766,7 @@ bool Content::init()
 
   startAddingGames();
 
-#define FROM_FILE 1
-#ifdef FROM_FILE
-
   loadFile();
-
-#else
-  ADDGAME("Sonic the Hedgehog", "Sonic", "sonic1", "Platform", "Megadrive", false, "Sonic", "", "");
-  ADDGAME("Sonic the Hedgehog", "Sonic", "sonic1", "Platform", "Game Gear", false, "Sonic", "", "");
-  ADDGAME("Sonic the Hedgehog 2", "Sonic 2", "sonic2", "Platform", "Megadrive", true, "Sonic", "", "");
-  ADDGAME("Sonic the Hedgehog 3", "Sonic 3", "sonic3", "Platform", "Megadrive", true, "Sonic", "", "");
-  ADDGAME("Sonic & Knuckles", "Sonic & Knuckles", "sonic4", "Platform", "Megadrive", false, "Sonic", "", "");
-  ADDGAME("Super Mario Bros", "Super Mario Bros", "super-mario1", "Platform", "NES", true, "Mario", "", "");
-  ADDGAME("Super Mario Bros 2", "Super Mario Bros 2", "super-mario2", "Platform", "NES", true, "Mario", "", "");
-  ADDGAME("Super Mario Bros 3", "Super Mario Bros 3", "super-mario3", "Platform", "NES", true, "Mario", "", "");
-  ADDGAME("Super Mario World", "Super Mario World", "super-mario-world1", "Platform", "SNES", true, "Mario", "", "");
-  ADDGAME("Super Mario Kart", "Super Mario Kart", "super-mario-kart", "Racing", "SNES", true, "Mario", "", "");
-  ADDGAME("Castle of Illusion Starring Mickey Mouse", "Castle of Illusion", "castle-of-illusion", "Platform", "Megadrive", false, "Disney", "", "");
-  ADDGAME("01234567890123456789012345679", "01234567890123456789012345679", "01234567890123456789012345679", "Platform", "Megadrive", false, "Disney", "", "");
-  ADDGAME("Aladdin", "Aladdin", "aladdin", "Platform", "Megadrive", false, "Disney", "", "");
-  ADDGAME("Aladdin", "Aladdin", "aladdin", "Platform", "SNES", false, "Disney", "", "");
-  ADDGAME("Aladdin", "Aladdin", "aladdin", "Platform", "Game Gear", false, "Disney", "", "");
-  ADDGAME("Quackshot", "Quackshot", "quackshot", "Platform", "Megadrive", false, "Disney", "", "");
-  ADDGAME("Duke Nukem 3D", "Duke Nukem 3D", "duke-nukem-3d", "FPS", "PC", false, "", "", "");
-  ADDGAME("Wipeout", "Wipeout", "wipeout", "Racing", "Playstation", true, "", "", "");
-  ADDGAME("Wipeout XL", "Wipeout XL", "wipeout-xl", "Racing", "Playstation", true, "", "", "");
-  ADDGAME("Metal Slug", "Metal Slug", "metal-slug", "Platform", "Neo Geo", true, "", "", "");
-  ADDGAME("Metal Slug 2", "Metal Slug 2", "metal-slug-2", "Platform", "Neo Geo", true, "", "", "");
-  ADDGAME("Metal Slug 3", "Metal Slug 3", "metal-slug-3", "Platform", "Neo Geo", true, "", "", "");
-  ADDGAME("Metal Slug X", "Metal Slug X", "metal-slug-4", "Platform", "Neo Geo", true, "", "", "");
-  ADDGAME("Virtua Racing", "Virtua Racing", "virtua-racing", "Racing", "Megadrive", true, "", "", "");
-  ADDGAME("Micro Machines 96", "Micro Machines 96", "micro-machines-96", "Racing", "Megadrive", true, "", "", "");
-  ADDGAME("Road Rash", "Road Rash", "road-rash", "Racing", "Megadrive", true, "", "", "");
-  ADDGAME("Road Rash 2", "Road Rash", "road-rash-2", "Racing", "Megadrive", true, "", "", "");
-  ADDGAME("Road Rash 3 - Tour de force", "Road Rash", "road-rash-3", "Racing", "Megadrive", true, "", "", "");
-#endif
-
-
 
   stopAddingGames();
 
@@ -824,7 +795,7 @@ bool Content::quit()
 void Content::loadFile()
 {
   ifstream file;
-  file.open(RESOURCE_PATH("pixbox.csv").c_str());
+  file.open(RESOURCE_PATH(DATA_FILE).c_str());
 
   char line[1000];
   string lineStr;
@@ -872,7 +843,7 @@ void Content::loadFile()
             sortKey,
             device,
             family,
-            multiplayer,
+            numPlayers,
             artwork,
             command;
         list<string> types;
@@ -881,11 +852,11 @@ void Content::loadFile()
         if(!split.empty()) {sortKey = split.front(); split.pop_front();}
         if(!split.empty()) {string typesStr = split.front(); types = d->split(typesStr, '%'); split.pop_front();}
         if(!split.empty()) {device = split.front(); split.pop_front();}
-        if(!split.empty()) {multiplayer = split.front(); split.pop_front();}
+        if(!split.empty()) {numPlayers = split.front(); split.pop_front();}
         if(!split.empty()) {family = split.front(); split.pop_front();}
         if(!split.empty()) {artwork = split.front(); artwork = Private::macroSubstitution(macros, artwork); split.pop_front();}
         if(!split.empty()) {command = split.front(); command=Private::unixify(command); command = Private::macroSubstitution(macros, command);}
-        ADDGAME2(title, shortTitle, sortKey, types, device, multiplayer != "1", family, artwork, command);
+        ADDGAME2(title, shortTitle, sortKey, types, device, std::stoi(numPlayers), family, artwork, command);
       }
     } // end if(!split.empty())
   }
